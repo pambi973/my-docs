@@ -1,0 +1,32 @@
+﻿--- 
+- 
+  become: true
+  hosts: all
+  task: 
+    - 
+      apt: 
+        Name: git
+        state: present
+      name: "install git"
+
+
+
+playbook2 
+
+--- 
+- 
+  become: true
+  hosts: all
+  task: 
+    - 
+      apt: 
+        Name: tree
+        state: present
+      name: "install git"
+
+
+------------------------------------------------------------
+Roles
+
+roles in ansible are next 
+

@@ -1,0 +1,52 @@
+Auto Scaling
+
+Scaling
+
+vertical scaling increasing  computing capacity
+
+horizontal scaling increaing no number of servers
+ 
+Auto scaling enables by scaling horizontally through adding or termination
+
+Basic parameters
+
+Minimum size
+
+Maximum size 
+
+Desired Capacity
+
+Scale out achieving scalability by incresing the number of amazon EC2 instances
+
+Scale up Achieving scalability by resizing the capacity
+
+Scale down  opp tp scale out and scale up
+ 
+Auto Scaling group
+
+Always keep minimum number of instances running
+
+Launch or terminate instances to meet desired capacity
+
+never start more than maximum number of instances
+
+keeps capacity balanced across AZs 
+
+Launch Configuration
+
+Termination Policies
+Which server is started first
+In which Avalibility zone having more server
+oldest configuration
+next billing hour
+
+what is Blue green deployement
+
+
+
+
+
+
+
+ 
+         

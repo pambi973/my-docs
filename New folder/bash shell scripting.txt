@@ -1,0 +1,63 @@
+Sh is original shell
+bash bourne again shell
+it was reinvented of shell
+to change permissions to file
+chmod 755
+chmod +x for all users
+chmod u+x 
+
+.sh is not necessary to excute shell
+
+comments are not excuted by the script
+two type
+single line comment
+muluti line comment
+
+1 #
+2 << myline
+
+>>
+
+Variables:
+ 
+read command is used to take input from terminal
+
+
+--------------------------------------
+install packages using shell script
+
+#!/bin/bash
+#This simple installation script for any package 
+echo "please enter your name"
+read "name"
+echo "hello $name"
+echo "what is your linux"
+read "linux"
+echo your linux is "$linux"
+echo "which package you want to install"
+read "pname"
+echo "your $pname is installing"
+yum install $pname -y
+echo "your $pname is installed"
+
+
+
+-------------------------------------------
+basically system defined commands will present at usr/bin
+
+which pwd
+which cp
+which ls 
+will be in usr/bin directorty
+
+do u want define any variales to pass acommands you need create ascript and copy to the particular path
+
+ec2-user/bin
+if u copy anything to bin it will excutes as a script
+
+we need to create one folder for scripts if you want excutes those are system defined commands
+need add the script locations to
+vi .bash_profiles
+add the path
+and 
+source .bash_profiles       

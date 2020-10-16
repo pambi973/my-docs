@@ -1,0 +1,33 @@
+VPC
+max/16
+min/28 
+
+CIDR
+Classical inter domain range
+Subnets are cannot be larger than VPC
+To change the vpc you must terminate your existing VPc and create new one
+
+one VPC have oneIGW
+it is a communication between instances in VPC and internet
+
+tenancy types
+shared
+dedicated 
+
+VPC is regional specific
+
+Subnet is avalibility zone
+
+per region 5vpc
+
+per subnet 200 ip
+
+5 ELP elastic ip
+
+
+
+
+
+
+
+

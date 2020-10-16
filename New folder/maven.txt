@@ -1,0 +1,76 @@
+Build tools are programs that automate the creation of executable applications from source code
+Examples: ant, maven,gradle java
+            ms build .net
+            c  Rmake, Cmake
+
+What is build management?
+ conversion of sc into artificates
+
+each modules consists of jar file in java
+
+combination of jar we will get war file
+
+waht is maven?
+
+build is build management tool
+documentation tool
+dependency management tool
+ 
+
+What is pom and what it contains?
+POM is means project object model. The pom. xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc.
+ pom is configuration file for maven, for every product we have a configuration build file.
+pom.xml having information about the project,
+
+
+life cycle of maven
+
+maven contains default life cycle
+every phase in life cycle called goal
+
+different goals in maven
+
+1 compile
+2 test
+3 package
+4 integration test
+5 install
+6 deploy
+---------------
+clean
+site
+
+
+difference between jar war ear
+jar java archive file
+combination of class file
+
+war web archive file 
+combination of many jar files and configuration file
+
+ear enterprise archive
+combination of war + licence file
+-------------------------
+setting of environment variable
+ .bash_profile we will set envirnment variables
+after that source .bash_profile
+
+why it is important
+------------------
+pom.xml contains
+1 coordiantes means project information
+gid
+artifactid
+version id
+in versioning _snopshot means project is in developing stage
+if not it is in releaseing state
+2 scm locations
+3 dependencies
+4 plugins
+5 modules
+6 distribution management
+-----------------------------------------
+https://mindmajix.com/maven-interview-questions
+
+
+ 

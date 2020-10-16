@@ -1,0 +1,212 @@
+LINUX
+---------------
+linux flauvor of unix
+unix flavors  
+
+solaris
+ibm-AIX
+HP-UX
+
+Linux flavors
+
+redhat 80percent market
+ubuntu
+centos
+fedora
+suse
+debia
+kali
+
+difference between shell and kernel
+
+shell is mediater between user and kernel
+
+kernel base version for linux
+
+
+
+
+
+--------------
+
+umask values 0022 for root user 0002 for normal user
+
+is it possible to change umask value
+
+777 dir 666 for file default permissions
+
+to set umask value umask 222
+
+how to set umask value permanantley for the specific user
+ 
+/home/ec2-user
+.bash_profile
+
+you need to add umask value in .bash profile
+
+how to set umask value permanantley for the all users
+
+/etc/profile
+
+uptime uptime of server
+
+free -m ram space
+
+difference between find and grep commands
+
+find will search file in directory 
+grep will search a string in file
+
+
+
+-------------------------------
+directory structure of linux
+
+/= root directory imp directory
+
+home contains the users info
+bin:binary files normal user can acess
+sbin: binary files root user can acess
+etc: all config files
+lib: libraries
+opt: used to install third party tools git maven sonarcube tomcat
+proc: process info.. cpuinfo
+
+root user home directory is /root
+
+command to show empty files in current directory
+find . -type f -empty
+find . -type d -empty d means directory
+
+what is indoe
+
+to change permision or giving ownership to others for directory
+command
+chown -R username:groupname directoryname
+
+
+---------------------------------------------
+Some Linux commands
+
+touch to create empty file
+ls -la all files in directory
+
+command to show empty files in current directory
+find . -type f -empty
+find . -type d -empty d means directory
+
+-----------------------------------------
+SCP command Secure copy if you want copy files from across the servers
+
+scp filename username@ip:path
+
+for directory
+scp  -R directoryname username@ip:path
+
+Cut Command:
+The cut command in UNIX is a command for cutting out the sections from each line of files and writing the result to standard output.
+Ex:
+$ cut state.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+
+cut -c 1-3 filename
+
+cut -d ":" -f 1 filename
+
+man
+uname
+
+AwK command
+Awk is a scripting language used for manipulating data and generating reports.The awk command programming language requires no compiling, and allows the user to use variables, numeric functions, string functions, and logical operators.
+WHAT CAN WE DO WITH AWK ?
+
+1. AWK Operations:
+(a) Scans a file line by line
+(b) Splits each input line into fields
+(c) Compares input line/fields to pattern
+(d) Performs action(s) on matched lines
+
+
+awk '{print $0}' .txt
+awk '{print $1,$3}' .txt
+awk '{print NR $0}' .txt
+
+
+----------------------------
+free -m to check how much storage is avalible
+
+------------------------------
+
+what is file system
+file system is a collection of files and directories 
+types
+1 disc based
+2 network based
+3 virtualor memory based
+what is disc based
+
+ext2/ext3/ext4/xfs are the disc based file systems using in liux
+
+whats is network based file sysytem
+
+nfs is used by linux for sharing linux for sharing files and directories
+
+virtual or memory based file systems
+swap memory by linux
+
+
+------------------------------
+
+in linux 1-64 
+windows c-z logical we can create
+
+-----------------------------------------
+creating empty files
+
+touch
+
+cat is the command to show data in file
+
+cat file name
+
+cat >> file name
+
+we can append or add data to the file
+
+vi(virtual editor)
+vi is the power full we can create+add+delete the file  
+vi commands
+esc i to insert
+esc q to quit
+esc wq! to save and quit
+esc yy copyline
+esc n yy copy n lines
+esc dd delete line
+esc n dd delete n lines
+esc shift D delete line at cursor
+esc r replace a charactor
+esc x delete single character
+esc u to undo
+esc dy to delete filed
+esc shift h to move head cursor
+esc shif m to middle
+esc shift g to last
+esc shift :set nu to add line numbers
+esc shift :set nonu to delete line numbers
+esc shift:line mumer
+
+
+------------------------------------------------
+ls commands
+ls -a display hidden files
+ls -d display all directories
+ls -m it will display all files and directories with comma
+ls -s display the size of the file
+ls -i display inode numbers of the file
+
+
+--------------------------------
+Absolte path means providing total path from root
+relative path means creating files from current directory
+--------------  

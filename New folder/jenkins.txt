@@ -1,0 +1,236 @@
+advntages?
+jenkins is ci/cd tool written in jenkins
+open source
+its a cross platform tool
+plugin based tool
+
+what is CI?
+ci is nothing but when there is any commits occured in our version control tools the build will trigger automatically.
+what is CD?
+Continous delivery means deploying code from lover environemt to production environment is called continous delivery. continous 
+
+no of stages of environment
+1 Development
+2 QA
+3 UAT user acceptance testing 
+4 Staging environment repilica to production
+5 production environment production
+------
+what is the difference between hudson and jenkins
+on top of hudson they are created jenkins
+-----------------------
+types of jenkins jobs
+1 freestyle project - we can create any type of projects here
+2 mvn project - it will excutes mvn projects only
+3 external job - job will be excuted by external machine like nodes
+4 multi configuration job - means job will run parallely even though we have enough excuters
+5 Multi barnching job
+6 pipe line job 
+----------------------------------
+jenkins homepage
+1 new item -creating new job
+2 people -to know how many are avalible with your jenkins
+3 build history - history all builds
+4 manage jenkins -
+5 credentials -
+---------------------------
+in /root we will have .jenkins directories 
+in .jenkins we have jobs,updates,logs
+
+in windows c programfiles
+users jenkins path
+
+in windows download jenkins.war file
+java -jar jenkins.war to install jenkins
+
+-------------------
+manage Jenkins contains
+1 configure system
+ system message
+ no of excuters
+ Lables is used for nodes
+ queit period is nothing but our next job will run after quiet period ends -job to job 
+poll scm will continously look for your refered repository
+best practise is quiet period = poll scm or less than
+-----------------------------------
+2 configure global security
+cd /etc shadow is the data base for unix users
+jenkins having own data base
+autherization
+a) any one can do any thing- disabling security
+b) legacy mode - old archetecture
+c) loged in users can do anything - read acess for all but loged one can do anything
+d)matrix based security- we can enable security for all jobs
+e) project based security - we can eanble security for projects
+f) role based security -  here we create roles and after we will assigne roles to users
+--------------------------------------
+some importantplugin in jenkins
+green balls
+html publisher
+git
+maven
+---------------------------
+Global security
+
+1 Authentication
+2 Autherization
+
+
+Authentication types
+
+1 delegate to servlet container
+2 jenkins own user data base
+3 LDAp
+4 Unix user/group data base having data base /etc/shadow
+
+ Autherization types
+
+1 any one  can do  anything
+2 legacy mode
+3 logged in users can do anything
+4 matrix based security
+5 project based matrix autherization strategy
+6 role based security
+--------------------------
+
+
+--------------------------------------------------
+Difference between matrix based and project based matrix authorization and role based authorization
+
+matix based authrization users will get overall permissions to jobs
+but in preoject we can restrict the users for jobs
+
+role based startgies
+here we will create roles
+we will add users to the roles
+---------------------------------------------------------------------------
+can we change jenkins home directory yes
+
+EXPORT JENKINS_HOME=/root/jenkins
+and restart the server.
+you need do at starting of the jenkins
+user information will lose job information will lose
+
+---------------------------------------------------
+safe restart wil be done after completetion of all jobs
+
+if a deveoper is not having build acess for job, how he can excute job
+
+no,but if a admin can change job configuration to job  any one can excute job
+
+by default jenkins session time out is 30 min
+
+but we can increase web.xml in web-inf directiory in .jenkins
+
+
+----------------------------------------------
+plugins use cases
+ 
+1 green ball plugin
+2 nested view plugin to create directory inside developerbuilds,QA builds
+3 role based startagie pluin
+4 rebuilder plugin
+when there is parameterized build if it fails we can run build with out giving parameters.
+5  Muilti Branch pipline  used to build from multiple branches inone scm
+6 job import plugin
+7 ssh agent 
+------------------------------------------------
+Creation of job consists
+1 general
+2 SCM
+3 Build triggers
+4 Build Environment
+5 Build
+6 post Build actions
+
+1 general contains
+
+1 Description
+2 Discard old builds
+3 this project is parameterized
+4 throttle bilds - we can manage  count of builds  
+5 disble this project -
+6 Excute concurent build if necessary- we can build same job parallely
+
+
+
+Build triggers
+a) trigger builds remotely
+token name
+b) Build other projects  are built
+Creating upstream project here
+
+c) Build Periodically
+d) Build when a change is pushed to github
+e) Poll SCM
+--------------------------------------------------
+not possible to take scm from to tools like svn and git
+
+
+----------------------
+to change jenkins port number
+sudo vim /etc/sysconfig/jenkins
+systemctl jenkins restart
+
+
+
+------------------------------------------------------
+pipe line in jenkins
+
+1 declarative
+2 scripting
+the basic difference between declatative between these two are declarative is simple and user understads
+ the scripted pipeline is a traditional way of writing the code.
+Declative starts with pipeline
+
+scripted starts with node
+--------------------------------------------------
+Structure and syntax of the Declarative pipeline:
+
+The Agent is where the whole pipeline runs. Example, Docker. The Agent has following parameters:
+
+any – Which mean the whole pipeline will run on any available agent.
+
+none – Which mean all the stages under the block will have to declared with agent separately.
+
+label –  this is just a label for the Jenkins environment
+
+docker –  this is to run the pipeline in Docker environment.
+
+
+EX:
+
+pipeline{
+  agent{ label 'node-1' } 
+  stages{
+    stage ('SCM') {
+      steps {
+        git 'githublink'
+      }
+     }
+     stage('compile') {
+       tools{
+         maven 'maven3.6.1'
+       }
+       steps{ 
+           sh 'maven Clean install'
+       }
+     }
+  }
+}
+   
+
+
+
+
+
+
+
+-----------------------------------------
+Scroll down and click on Post-build action button and select Publish JUnit test result report option.
+
+Extended Email Notification
+
+--------------------------------------------------++
+Multijob pipeline
+

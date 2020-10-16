@@ -1,0 +1,11 @@
+cloud trail records api calls in your account and delivers a log file to your s3 bucket
+ 
+ What is data events 
+object level tracking is called data events
+
+what is management events
+
+users in root account level tracking is called management events
+
+
+

@@ -1,0 +1,11 @@
+Hi,
+I am Maheswara Reddy, I have  3.4+ years of experience in IT industry with in Configuration Management, Change/Release/Build Management, System Administration, Support and Maintenance in environments like Red Hat Enterprise Linux, CentOS, Ubuntu and expertise in automating builds and deployment process with focus on DevOps tools and AWS Cloud Architecture. Experience in working on AWS and its services like AWS IAM, VPC, EC2, EBS, RDS, S3, ELB, Auto Scaling, Route 53, Cloud Watch, Cloud Trail, and SNS and experienced in Cloud automation using AWS Cloud Formation templates to create custom sized VPC, subnets, NAT, EC2 instances, ELB and Security groups
+
+1) Total Exp - 3.4
+3) Current CTC - 4.5LPA
+4) Expected CTC - 6.5PA
+5) D.O.B: 25/07/1995
+6) Notice Period: 30 days
+7) Email ID: maheswra3050@gmail.com
+8) Contact No:7013656618
+9) Current Company: RMSI Pvt Ltd

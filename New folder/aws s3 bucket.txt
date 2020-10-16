@@ -1,0 +1,58 @@
+s3-----
+
+hierarchy
+
+Account
+Bucket--100
+object --5tb max
+put operation --5gb
+
+bucket name should be globally unique
+bucket belongs to specific region
+
+---------------------------------------------------
+
+s3 infrequent acess
+storage classification types
+
+1) s3 standard
+2) s3 intelligent
+3) s3 standard infrequent acess
+4) s3 az1a
+5)  s3 glacier
+6) s3 glacier deep archieve
+
+
+-------------------------------------s3 Bucket Properties
+
+1) versioning 
+
+if we Enable versioning for Bucket it will create next level of security for over oeject
+
+if there is any changes in same object also it will create new version along with existing version with changes ocuured in the oject
+even we delete object in versioning it will show in version mode created delete marker with one more version id
+
+we need delete objects when versioning is enabled case versioning hide mode
+
+2) server acess logging
+
+Means once you enable server acess logging 
+we had to create or give path for this bucket logs storing
+that means what we are doing with this bucket all logs will be stored in given path of the bucket
+
+3) static website hosting
+
+that means once we enable this hosting it will create one endpoint for the object if we click on the endpoint in the internet it will show object data
+
+4) object level tracking:
+
+we need to enable this with the help of cloud trail
+we need create one cloud trail and we need to store the logs the cloud trail logs in the bucket
+
+5) Default Encryption: 
+default encryption means it will encrypt over data and stores in encrypted format
+after downloading it will down load as decrypted format
+
+
+
+ 

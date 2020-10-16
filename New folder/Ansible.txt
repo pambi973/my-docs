@@ -1,0 +1,303 @@
+Ansible is a configuration management tool
+Ansible will follow push mechanism
+Ansible is agent less tool
+what is idempotency
+means gives same consistant results
+
+ACM Should contain (Ansible control machine) linux machine
+
+Enable Password based authentication
+       goto      (cd /etc/ssh/sshd_config)
+       password authentication yes
+      service ssh restart
+      service ssh status
+1 i want to create user
+adduser ansible
+enter new passwd
+2 giving sudo permission to this user
+visudo 
+3 install ansible
+4 key based authentication
+ssh-keygen
+ssh-copy-id ansible@ipadress
+NODE
+
+1 i want to create user
+2 giving sudo permission to this user
+3 install python       
+
+
+Ansible path
+cd /etc/ansible
+
+ansible contains
+1 ansible.cfg 
+2 hosts
+3 roles
+
+hosts is nothing but inventory file 
+
+by adding private ip of instance to hosts file
+
+ansible -m ping all
+
+
+Ansible excutes commands in 2 ways
+
+1) adhoc commands
+2) play books
+
+adhoc commands are using in ansible terminal 
+
+What is YAML
+ “YAML Ain't Markup Language,”
+XML stands for eXtensible Markup Language
+key pair values
+yaml language converts our keypair values to python language
+yml and xml and json these are human and machine redability
+
+before writing yaml need to identify key values based on requirement
+sample file
+
+companies:
+-  Name:microsft
+    Location:Hyderabad
+-  Name:google
+    Location:Bangalore
+Module
+module is smallest unit of which used for defining your task
+task is nothing but 
+playbook 
+playbooks consists of tasks
+
+---
+- hosts: all
+  become: yes
+  task:
+  - name: install git 
+    apt:
+     Name:git
+     state: present
+
+to run playbook in ansible command is
+ ansible-playbook playbook name
+
+ansible palybook with tags:
+tags in ansible playbooks is to excute particular task or skip particular  task in ansible 
+
+---
+- hosts: all
+  become: yes
+  task:
+  - name: install git 
+    apt:
+     Name:git
+     state: present
+    tag: 
+      - install
+command while excuting
+ansible-playbook play.yml --tags=install
+ansible-playbook play.yml --skip-tags=install it will skips the particular task
+
+
+--------------------------------------------
+ansible directory structure
+ tree /etc/ansible
+1 ansible.cfg
+2 host
+3 roles
+
+Ansible.cfg------
+
+priority of ansible.cfg file
+ansible_config environment variable 
+current directory
+home directory
+/etc/ansible
+
+if u want change inventory file u need to mention it in the  ansible.cfg
+
+while working in real time we need to create our own workspace of ansible 
+steps
+1 create a directory in ur home
+2 cp all files /etc/ansible/* to your home directory
+3 give  owner permission for copied directory
+4 change host file location in ansible.cfg  
+
+--------------------------------------------------
+grouping in ansible host file is usefulway 
+
+[group1]
+--------
+--------
+--------
+[group2]
+------
+-------
+-------
+
+[group3]
+--------
+--------
+------
+
+[largegroup:children]
+group1
+group2
+
+--------------------------------------------------------
+host_key_checking=false in ansible.cfg file
+means we need give fingerprint acess as true while first time connecting to the nodes yes/no yes 
+if we provide host key it will not ask
+----------------------------------------------------
+in rhel we are unable to install ansible
+so we can install ir from pip
+
+yum install pytho2
+
+pip2 ansible install
+
+with pip installation ansible we not get default directory
+we need to create our own directorty with
+ansible.cfg
+roles
+hosts
+ansible.cfg
+[defaults]
+inventory = directory of host
+host_key_checking=false
+-------------------------------------------------------
+adhoc commands
+
+adhoc commands are used to excute one simple task
+with one or more servers
+
+syntax
+ansible [-i prod_inv]  server_name:group1:group2 -m module [-a argument_value]
+
+When ever you want run single command like restart we will use ansible adhoc commands
+
+Fork is nothing bUT default ansible excutes playbooks parallel in Nodes by  forks values
+
+if you want store ansible modules in nodes give a comment
+ANSIBLE_KEEP_REMOTE_FILES=1
+
+by default ansible stores it in /home/ansadmin
+.ansible
+-------------------------------------------------
+copy module
+
+ansible all -m copy -a src dest
+
+fetch module
+
+ansible all -m fetch -a src dest
+
+copy*fetch
+oppsite to copy 
+fetch will take data from node to control machine
+
+flat =yes
+
+--------------------------------------
+create and delete using adhoc commands
+
+using module called file or diectory
+
+ansible all -m file "path=/tmp/hello.txt state=touch" 
+
+ansible all -m file "path=/tmp/hello.txt state=directory"
+
+-b or --become=yes
+sudo permisions to user
+--------------------------------
+facts is nothiing but knowing information about managed nodes
+here we are using module called setup
+
+ansible all -m setup -a"filter=ansible_mounts"
+-------------------------------------
+facts are two types 
+1 default facts
+2 custom facts
+what is custom facts
+
+steps to make custom facts
+
+1 create /etc/ansble/facts.d in managed nodes
+2 create a file name with .fact extension
+3 create a shell/bash script in .fact file
+
+sample
+
+to know git and httpd version we need create one custom fact
+
+ansible all -m file -a "path=/etc/ansible/facts.d touch=directory" -b
+
+ansible all -m file -a "path=/etc/ansible/facts.d/custom.fact
+ touch=file" -b
+vi custom.fact
+#!/bin/bash
+
+git_ver=$(git --version | awk '{print$3}')
+httpd_ver=$(httpd -version | awk 'NR=1 {print $3}')
+
+cat << EOF
+{ "Git_version": "$git_ver"
+   "httpd_versiom: $httpd_ver"
+}
+EOF
+
+--------------------------------------
+Inventories
+
+are two type
+1 static inventory 
+2 dyanamic inventory
+
+Dyanamic inventory is uesd when node are in cloud platform
+
+need to add scripts based on cloud platform we need to download scripts
+for aws
+1 ec2.ini
+2 ec2.py
+need to instal boto 
+sudo yum install boto -y
+
+need to add iam role to ansible engine
+full acess to ec2 instance
+
+
+
+-------------------------------------
+some manage nodes doesnot having python then we can use raw module
+
+ansible ip -m raw -a "scp"
+--------------------------------------
+debug module
+>this module prints statements while excution and can be useful for debugging variables and expressions
+> debug module accepts three parameters
+1 msg
+2 var
+3 verbosity
+--------------------------------------playbook rules
+
+
+---
+ - hosts
+   become=yes
+   tasks:
+   - debug: msg='welcome to ansible playbook'
+   -	
+   -
+------------------------------------------------------
+roles
+- place the group of playbooks in one file, it will help to reduce the code omplexity, and increses
+
+steps
+ ansible-galaxy init lamp
+
+------------------------------------------
+
+what is handler
+
+handler is simple as like a task in playbook it comes with notify

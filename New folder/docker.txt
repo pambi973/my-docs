@@ -1,0 +1,237 @@
+ what is docker
+docker is containrization tool 
+
+docker is written in golanguage
+
+containers are isolated workspaces,
+
+docker is opensource- solomon hykes
+
+
+docker install commands
+from docker hub
+
+docker commands
+
+docker --version
+
+docker info  whether engine is alive or not
+
+docker ps to check running containers in docker
+
+docker images to check images in docker engine
+
+docker images --help
+
+docker login 
+
+docker logout for docker hub
+
+docker push image name
+
+image and containers having unique id
+
+docker run -d -p 8081:8080 jenkins
+first one is external
+and next one is internal
+  -d detach mode
+
+docker ps --help
+
+containers are two types
+short live 
+
+long lived   
+
+
+docker mainly focus on application based containers(long lived containers)
+
+docker stop container id
+
+docker start cid
+
+need to stop the container and remove the image from docker
+
+docker rmi -f imageid 
+
+docker images -q
+
+docker rmi -f $(docker images -qa)
+
+docker contains 
+
+client
+demon
+When a user sends commands, Docker CLI sends information to Docker daemon to manage and make changes to containers, images, and networks. 
+
+--------------------
+docker engine - a platform for running a containers
+
+docker repo - a place where you can get the images
+public hub.docker.com
+
+pro store.docker.com
+
+private nexus,artifactory
+
+docker container - a running state of image is called container
+
+where images stored
+var/lib/docker
+
+
+first command
+- docker info
+- docker help
+
+how to get inside the container
+
+docker exec -it cid /bin/bash 
+docker attach
+
+docker exec executes a new command / create a new process in the container’s environment, while docker attach just connects the standard input/output/error of the main process(with PID 1) inside the container to corresponding standard input/output/error of current terminal(the terminal you are using to run the command).
+
+exec is the way run the excutables and always create new terminal
+
+attach is the way to get attached to the running process and will not create a new terminal 
+
+how to come out of the container with out existing
+cntrl+p+q
+
+docker exec is very poweful command
+
+how can u see the number of processes is running inside the container
+docker top cid
+top 
+is the command to know the running process inside the container
+
+docker stop containerid
+
+how to see all the containers
+running 
+created
+exited
+docker ps -a
+how to check the container  process logs
+docker logs cid
+jenkins
+how to name a container
+docker  -d --name=jenkins -p 8080:8081
+docker rename cid new name
+ 
+how can i describe the containers
+docker inspect cont-id
+-------------------------------------
+cp copy to files or folders from host to containers or from containers to host
+
+if you wnat delete the container you need to stop it
+docker rm cid
+
+for images you need remove containers with the images and than you need delete images
+docker rmi -f imagename or id
+
+
+how to know cpu and ram used by the containers
+docker stats cid
+docker stats
+
+
+each containers need at least one process to alive
+------------------------------------------
+how to stop remove all containers
+docer stop $(ps -qa)
+docker rm $(ps -aq )
+--------------------------------
+
+volumes with containers
+internal -/var/jenkins_home 
+extrenal : /opt/jenkins backup
+
+docker run -d --name=jenkins -p 8080:8080 -p 50000:50000 -v ext:int jenkins
+
+we cant create external volume for running containers
+state less application means the data will not store in container
+
+satate full application means the data will store in container
+
+docker volume ls
+docker inspect volume id
+
+docker container creates persistant volume
+
+-----------------------------------------
+how tosearch images using command line
+docker search
+-----------------------------------------
+
+docker networking
+
+how to know th ip of container 
+docker inspect cid 
+how to stop containers by force
+kill
+
+
+------------------------------------------
+tags
+nothing but versioning
+
+------------------------------------------ 
+docker  custom image creation by using docker file
+ 
+docker file is nothing but instruction
+
+docker parameters
+
+FROM - selection of your right base image
+
+MAINTAINER/LABEL - name
+
+RUN - these are commands that are executed during build of our image
+
+CMD - these are cmd are executed while runnig container
+
+COPY - copying files from localmachine to container
+ADD - files will copy from internet or s3 bucket
+
+Docker ignore file can ignore while files are in add or copy time 
+
+EXPOSE - Ports
+--------------------------------------
+docekr file
+to build docker file docker build -t name of image
+mkdir images
+cd images
+vi Dockerfile
+
+
+FROM nginx
+MAINTAINER mahesh
+RUN touch m1 
+
+DOcker --memory cin 
+docker cpu
+
+------------------------------------------
+Docker networking 
+
+single host networking
+
+multi host networking(docker swarm)
+
+
+3 type
+
+none
+host- betwen host and container
+bridge- between containers
+----------------------------
+union file system
+----------------------------------
+docker multi host networking is called docker swarm
+
+docker swarm init
+
+-----------------------
+A Dockerfile is a text document that contains all the command lines to assemble an image
+

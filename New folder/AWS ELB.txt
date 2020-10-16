@@ -1,0 +1,56 @@
+ELB
+Elastic load balancer work
+
+Distrubute incoming application traffic
+
+perform health checks on ec2 instances
+
+remove bad instances
+
+identify bad instances
+
+HTTPS 443 port number 
+
+till  ELB traffic will be allowed by https
+ afer that http will take care 
+HTTP Port no 80
+
+ what is Ideal connection time out
+
+if no data received within time out ELB closes connection Default 60s
+
+Keep alive timeout option recommended for listners
+
+ what is connection draining quite reverse for above
+
+cross zone load balancer
+
+ELB http https tcp ssc protocals
+
+ELB types
+
+classic
+
+Application 
+
+Network 
+
+ 
+what is ssl termination
+
+ssl termination is nothing but when user is request for https and converting to http  called as ssl termination
+
+ELB based on round robin ,weighted round robin
+
+least connection
+
+autoscalr+load balance= elastic load balancer
+
+
+difference between classic and network and application need to search
+
+Application load balancer
+
+
+
+
