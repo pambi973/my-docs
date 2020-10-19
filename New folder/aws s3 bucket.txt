@@ -2,7 +2,7 @@ s3-----
 
 hierarchy
 
-Account
+per Account
 Bucket--100
 object --5tb max
 put operation --5gb
@@ -12,17 +12,11 @@ bucket belongs to specific region
 
 ---------------------------------------------------
 
-s3 infrequent acess
-storage classification types
-
-1) s3 standard
-2) s3 intelligent
-3) s3 standard infrequent acess
-4) s3 az1a
-5)  s3 glacier
-6) s3 glacier deep archieve
-
-
+In S3 bucket we have option for each bucket is
+1) overview
+2) properties
+3) permissions
+4)Managemet
 -------------------------------------s3 Bucket Properties
 
 1) versioning 
@@ -73,8 +67,26 @@ we can store it till disabiling compliace mode and delete it
 
 and some more.....
 
----------------------------------------
+-------------------------
+>>In permissions we have 
+1)block public acess
+2)acess control list- if want give acess for oter aws account user to acess this bucket 
+3) object ownersip 
+4) Bucket policie
+-------------------------
 Management
 
 in management we have life cycle
-crr(cross region repilication)
+----------------------
+In Life cycle
+s3 infrequent acess
+storage classification types
+
+1) s3 standard
+2) s3 intelligent
+3) s3 standard infrequent acess
+4) s3 az1a
+5)  s3 glacier
+6) s3 glacier deep archieve
+
+ crr(cross region repilication)

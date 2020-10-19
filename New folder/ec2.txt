@@ -28,7 +28,7 @@ we will not launch spot instance.
 
 storage types need to search
 
-snapchat is nothig but taking backup for c or d drives
+snapchat is nothig but taking backup for c or d drives or root volumes in linux
 
 security
  source 
@@ -77,3 +77,9 @@ mstsc command to open remote desktop for windows files.
 ------------------------------------------
 
 while attaching volumes we need to stop running instances 
+
+--------------------------------------------------
+how to copy files from ec2 to s3 or s3 to ec2
+
+aws s3 cp sorce dest --recursive
+aws s3 cp . s3://bucket name/folder  --recursive

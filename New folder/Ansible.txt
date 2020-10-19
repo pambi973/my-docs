@@ -4,7 +4,7 @@ Ansible is agent less tool
 what is idempotency
 means gives same consistant results
 
-Ansible in RHEL yum install ansible is not working
+Ansible in RHEL8 yum install ansible is not working
 need to install pyton2
 need to install pip ansible -y
 after installation we dont have ansible default structure
@@ -17,6 +17,7 @@ Enable Password based authentication
        password authentication yes
       service ssh restart
       service ssh status
+
 1 i want to create user
 adduser ansible
 enter new passwd
