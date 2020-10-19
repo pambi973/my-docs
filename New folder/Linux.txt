@@ -51,6 +51,8 @@ how to set umask value permanantley for the all users
 uptime uptime of server
 
 free -m ram space
+difference etween free and df -h 
+free will give ram usage df will give memory ususage
 
 difference between find and grep commands
 
@@ -74,16 +76,14 @@ proc: process info.. cpuinfo
 
 root user home directory is /root
 
-command to show empty files in current directory
-find . -type f -empty
-find . -type d -empty d means directory
 
 what is indoe
 
+The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory. Each inode stores the attributes and disk block locations of the object's data.
 to change permision or giving ownership to others for directory
+
 command
 chown -R username:groupname directoryname
-
 
 ---------------------------------------------
 Some Linux commands
@@ -134,7 +134,7 @@ awk '{print NR $0}' .txt
 
 
 ----------------------------
-free -m to check how much storage is avalible
+free -m to check how much ram storage is avalible
 
 ------------------------------
 
@@ -171,6 +171,9 @@ cat is the command to show data in file
 cat file name
 
 cat >> file name
+
+cat -n file name
+file displays with numbers
 
 we can append or add data to the file
 
@@ -209,4 +212,119 @@ ls -i display inode numbers of the file
 --------------------------------
 Absolte path means providing total path from root
 relative path means creating files from current directory
---------------  
+----------------------------------------
+Some important filter commands
+
+More- display file in page by page
+less- display file in page by page from below
+sort- sort lines in alphabetic order
+wc- count no lines,characters,words
+wc filename
+wc -l filename
+wc -c filename
+wc -w filename
+
+Head it will display default top 10 lines
+tail it will display default 10 lines from bottom
+
+ps -ef to check how many process running by the system
+
+-----------------------------------------------
+
+Disk management or File managemet
+
+how many disk are avalible 
+fdisk -l  
+
+fdisk diskname
+
+it will opens disk with partion table along with command prompt
+
+command (m for help): n for creating new partition
+enter first cylinder number: no
+last cylindr no: u can give no or size(+sizeM or K or G)
+command: p
+to show how many partiotions in the disk
+
+command : w to save and exit from the partition disk
+
+need to save patition in the disk
+need to run this command two times
+or otherwise we need to reboot ur device
+partx -a /dev/sda
+partx -a /dev/sda
+
+need to format the created partition
+commands : mkfs.ext4  partition name(/dev/sda6)
+
+mount the partition
+
+ need to create one directry
+
+mkdir /directory name
+
+mount partition name /directory name -temporary
+for permanant 
+vi /etc/fstab
+need to enter details
+partition name  directory filesystem defaults 0 0
+unmount /oracle
+mount /oracle
+now it will be mounted permantly
+
+to see the mounted partition size
+df -h  
+
+sudo shutdown -r to reboot our system in linux
+
+-------------------------
+fields in fstab
+
+1 partition name
+2 directory name
+3 file system
+4 permissions
+5 fs dump value
+6 fsck pass value
+
+we can create label name for partitions
+e2label partition name - it will show label name
+
+u want create label name e2label partitionname labelname
+
+to permenant it
+vi /etc/fstab
+partition name place LABEL=laelname
+----------------------------------------------
+A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. If you delete the original file, the soft link has no value, because it points to a non-existent file. But in the case of hard link, it is entirely opposite. Even if you delete the original file, the hard link will still has the data of the original file. Because hard link acts as a mirror copy of the original file.
+
+soft link will work across the file system across c and d drives  but in case of hard link it will not work
+
+----------------------------------------------------- 
+linux os has 4 booting phases
+
+1) bios phase
+2) osloader phase
+3) kernel phase
+4) init phase
+
+Bios phase 
+
+-----------------------------------------------------
+what is run level 
+
+run level is a software program under which some group of  services and process will exists
+
+init 0 shutdown the system
+init 1 single usermode
+init2 multi user mode without nfs(network file system)
+init3 multi user mode with nfs(full text mode and we are using)
+init4  un used
+init5 GUI
+init6 restart
+
+to check present run level of system 
+who -r
+
+init6
+cat /etc/passwd to check users in system

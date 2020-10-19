@@ -60,4 +60,46 @@ need add the script locations to
 vi .bash_profiles
 add the path
 and 
-source .bash_profiles       
+source .bash_profiles 
+--------------------------------------------
+variables 
+
+Variables are an important part of any program or script. A variable is a simple way of storing our data
+
+variale can be define in terminal and script
+
+Need to print the variable value or call your variable you need to code $ infront of variable
+
+rule
+
+1)variable name should contain lettets(A-Z) numbers (0-9), (_)
+2) variable name should not start with numbers
+3) variable name should not have any gaps
+
+rules for storing data
+
+if u want store data with spaces use x="in beween data should be present"   
+if not u can code like x=nogaps
+
+variable and types
+
+1 user defined variables
+2 system defined variable
+3 spcial variable
+
+system defined variables are present inside the system or os
+with env command we can check all system defined variables.
+
+echo "$"
+$? is a special  variable is using we are
+it  will give result of your old previous excuted command 
+if op is 0 it is ok
+in not it was a error 
+--------------------------------------
+if u want stroe ur command output into file u need to mention it as
+ls > filename
+
+----------------------------
+configuring gmail setup on linux server
+
+yum install send mail mailutilities -y

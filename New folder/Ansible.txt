@@ -4,6 +4,12 @@ Ansible is agent less tool
 what is idempotency
 means gives same consistant results
 
+Ansible in RHEL yum install ansible is not working
+need to install pyton2
+need to install pip ansible -y
+after installation we dont have ansible default structure
+we need to create structure of ansile
+
 ACM Should contain (Ansible control machine) linux machine
 
 Enable Password based authentication
@@ -109,8 +115,8 @@ ansible directory structure
 
 Ansible.cfg------
 
-priority of ansible.cfg file
-ansible_config environment variable 
+PRIORITY OF ANSIBLE.CFG FILE 
+ansible_config environment variable as  -i host filename
 current directory
 home directory
 /etc/ansible
@@ -177,18 +183,21 @@ ansible [-i prod_inv]  server_name:group1:group2 -m module [-a argument_value]
 
 When ever you want run single command like restart we will use ansible adhoc commands
 
-Fork is nothing bUT default ansible excutes playbooks parallel in Nodes by  forks values
+FORK IS NOTHING BUT DEFAULT ANSIBLE EXCUTES PLAYBOOKS PARALLEL IN NODES BY  FORKS VALUES
 
-if you want store ansible modules in nodes give a comment
+if you want store ansible modules in nodes give a comment as in ansible.cfg
 ANSIBLE_KEEP_REMOTE_FILES=1
 
-by default ansible stores it in /home/ansadmin
-.ansible
+when ur excuting any adhoc command or playbook 
+In nodes it will create .ansible directory 
+in that directory we have tmp directory in tmp it will store our modules
 -------------------------------------------------
 copy module
 
 ansible all -m copy -a src dest
 
+ansible -m copy -a "content=this content dest=/tmp/hello.txt"
+if there is any file with same name give a arguement as -a backup=yes
 fetch module
 
 ansible all -m fetch -a src dest
@@ -197,7 +206,10 @@ copy*fetch
 oppsite to copy 
 fetch will take data from node to control machine
 
-flat =yes
+flat =yes means it will not create directory of node where file is located
+
+command module 
+ansile will take y default command module
 
 --------------------------------------
 create and delete using adhoc commands
@@ -219,14 +231,15 @@ ansible all -m setup -a"filter=ansible_mounts"
 facts are two types 
 1 default facts
 2 custom facts
+other tahn default facts u want collect extra data then u need to create custom facts
 what is custom facts
-
+if u want know versions of all applications like git maven python u can create custom facts
 steps to make custom facts
 
 1 create /etc/ansble/facts.d in managed nodes
 2 create a file name with .fact extension
 3 create a shell/bash script in .fact file
-
+4 give excution permission to that file
 sample
 
 to know git and httpd version we need create one custom fact
@@ -301,3 +314,10 @@ steps
 what is handler
 
 handler is simple as like a task in playbook it comes with notify
+----------------------------------------------
+ansile adhoc commands
+to excute one task
+commad
+ansible {servers}where u want excute -m {module} -a{arguement}
+
+

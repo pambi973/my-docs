@@ -234,3 +234,20 @@ Extended Email Notification
 --------------------------------------------------++
 Multijob pipeline
 
+we can configure multiple jobs here
+
+we you run this job automatically all the jobs you configured jobs will be build parallely
+-----------------------------------------------
+copying jobs from one jenkins server to other servers
+
+if u want job in one server to other server u need to copy the config.xml file in jobs directory to other server jobs directory by using scp command
+-----------------------------------------------
+copy aritifact plugin
+
+we can copy artifact of other job to my current job
+
+in my current job we need to goto build action 
+
+in build actions we have copy artifacts
+
+

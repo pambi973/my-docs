@@ -53,6 +53,28 @@ we need create one cloud trail and we need to store the logs the cloud trail log
 default encryption means it will encrypt over data and stores in encrypted format
 after downloading it will down load as decrypted format
 
+some advanced properties
+6) object lock
 
-
+we need to enable it while creating time of bucket
+prerequistes are enable versioning
+one more layer to secure object
+two types
+1 retention mode
+we can delete object with some spl permissions
+two types
+one we can delte with some spl permissions
+second one we need wait till the time expire what we given
+2 compliance mode
+we can store it till disabiling compliace mode and delete it
  
+
+7) requst pays
+
+and some more.....
+
+---------------------------------------
+Management
+
+in management we have life cycle
+crr(cross region repilication)
