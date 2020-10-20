@@ -5,11 +5,11 @@ its a cross platform tool
 plugin based tool
 
 what is CI?
-ci is nothing but when there is any commits occured in our version control tools the build will trigger automatically.
+CI is nothing but when there is any commits occured in our version control tools the build will trigger automatically.
 what is CD?
-Continous delivery means deploying code from lover environemt to production environment is called continous delivery. continous 
+Continous Delivery means deploying code from lover environemt to production environment is called continous delivery. continous 
 
-no of stages of environment
+No of stages of environment
 1 Development
 2 QA
 3 UAT user acceptance testing 

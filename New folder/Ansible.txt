@@ -274,11 +274,20 @@ need to add scripts based on cloud platform we need to download scripts
 for aws
 1 ec2.ini
 2 ec2.py
+to run the above scripts
 need to instal boto 
 sudo yum install boto -y
 
 need to add iam role to ansible engine
-full acess to ec2 instance
+full acess to  all ec2 instance
+
+if u launch new ec2 server as mannuly ansible will not reach new server bcoz
+the server didnot exchaanged keys for passwd less authentication
+in real time cases we need to we will configure auoscaling with configred AMI which already exchanged so no problem will occured.
+anisble-playbook  play.yml -i ec2.in
+adhoc command is
+ansible {ec2users} group name -m module -a argument -i hostnamr {ec2.in}
+
 
 
 
@@ -320,5 +329,34 @@ ansile adhoc commands
 to excute one task
 commad
 ansible {servers}where u want excute -m {module} -a{arguement}
+------------------------------------------------------------
+
+In Ansible We can connect managed nodes by using two way
+1) passwd less authentication using sshkeys exchanges
+2) passwd based authentication creating same user and passwd in all nodes and acm
+
+create a same user in all nodes and passwd also
+
+after that create sudo permission to user
+
+visudo
+below root user
+username= ALL NOPASSWD= ALL
+
+adhoc command to do this
+
+ansible all -m ping -k -b -K
+k is use for connecting node need to give passwd
+b is used to become sudo
+K is use for sudo passwd if you didnot provided (NOPASSWD= ALL) in sudo
+
+If the managed node and ACM does having same user from ACM the module will directly excuted at ansadmin
+it it not there we need to give the user which is present in managed node
+
+adhoc command is: ansible ipadress -m ping -k -u username
 
 
+-------------------------------------------------------------------
+Ansible Variables
+
+ 

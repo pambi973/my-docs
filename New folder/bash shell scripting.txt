@@ -102,4 +102,34 @@ ls > filename
 ----------------------------
 configuring gmail setup on linux server
 
-yum install send mail mailutilities -y
+yum install send mail mail utils -y
+----------------------------------
+grep command
+
+grep will search sring/pattern in A file
+
+basic opreations
+options in grep 
+
+-i it will search with case sensitive
+-w search with word matching
+-v display the values which are not matchng with string
+-o display matched parts from matched lines
+-n display matched line number
+-c display mached count of line number
+-A display after the string n no of lines
+-B before the string
+-C display both
+-r display recursively current directory and its sub directory
+-l to display only file names
+-h to print content and hide filenames
+
+Some Aadvance grep commands 
+-f means need to create a file and give the strings which u want search in file 
+grep -f file no.txt
+
+-e means we can search multiple strings here
+grep -e "string" -e "string2" -e "string3"  filename
+
+grep -E [options] filename.txt
+grep -E "string1|string2|string3" filename.txt

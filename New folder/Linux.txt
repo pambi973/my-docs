@@ -328,3 +328,67 @@ who -r
 
 init6
 cat /etc/passwd to check users in system
+----------------------------------------
+Group Management
+group is collection of users
+
+we have two types of groups
+
+1 primary - if the user is present in one group
+2 secondary - if the user is present in one or more groups is called secondary
+
+group id s in linux
+
+0-99 system groups
+100-499 deamon groups
+500-60000 user defined groups
+
+to check the groups 
+
+cat /etc/groups
+
+to create group 
+groupadd name id 
+
+to assign passwd to group
+
+gpasswd name
+
+cat /etc/gshaow 
+consists of group passwds
+
+do u want change group id
+groupmod -g 600 530
+group -n new name old name
+groupdel groupname
+grpck to check errors in group
+
+user can login to 16 other groups along with primary group
+
+user cant loginto the system if edidnot have primary 
+
+useradd command default will give group home directory shell
+
+it will read from cat /etc/default/useradd
+
+
+what are the fields in cat /etc/shadow
+
+1 usename
+2 encrypted passwd
+3 date of password change(keep in days when kernel started)
+4 min days passwd expiry
+5 Max daays passwd expiry
+6 warning
+7 0 
+8 
+
+what are fields cat /etc/passwd 
+1 usernam
+2 x 
+3 userid
+4 group id
+5 home directory of user
+6 user shell
+
+id users name give in how many grous user having will give
