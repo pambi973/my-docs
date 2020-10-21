@@ -51,6 +51,34 @@ difference between classic and network and application need to search
 
 Application load balancer
 
+----------------------------------------
+what is application load balancer 
+
+application load balancer will support for path based routing 
+it will run with http and https protocals
+it was running in layer7 of OSI model
+
+
+how we create load balancer means 
+
+first need to create ec2 instances in different avalibility zones
+
+create a load balncer ALB
+
+steps
+
+load balancer configure
++
+configure secrity settings
++
+configure security groups
++
+create a target group
++
+review
+---------------------
+
+
 
 
 

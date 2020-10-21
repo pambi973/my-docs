@@ -83,3 +83,6 @@ how to copy files from ec2 to s3 or s3 to ec2
 
 aws s3 cp sorce dest --recursive
 aws s3 cp . s3://bucket name/folder  --recursive
+
+we can modify the root volume of server it means goto ebs volumes 
+and select the server and modify volume  roboot ur system

@@ -359,4 +359,32 @@ adhoc command is: ansible ipadress -m ping -k -u username
 -------------------------------------------------------------------
 Ansible Variables
 
+Variale is nothin but storing values
+
+types of variables
+1 default variables
+2 inventory vars(host vars and group vars)
+3 facts and local facts
+4 registerd vars
+
+
+
+---------------------------------------
+playbooks
+
+playbook is useful to perform multiple tasks and overcome the limitation of adhoc commands
+play book consists of no of plays
+
+simple syntax for playbooks
+
+---
+  - host: all
+    name: this is syntaxof play book
+    tasks:
+    - name: this is a first module
+      module
+    - name: this is a second module
+      module2
+
+
  

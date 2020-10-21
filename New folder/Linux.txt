@@ -59,7 +59,7 @@ difference between find and grep commands
 find will search file in directory 
 grep will search a string in file
 
-
+find . -type f -ls |grep '2017'
 
 -------------------------------
 directory structure of linux
@@ -94,6 +94,8 @@ ls -la all files in directory
 command to show empty files in current directory
 find . -type f -empty
 find . -type d -empty d means directory
+
+find . -type f -ls |grep '2017'
 
 -----------------------------------------
 SCP command Secure copy if you want copy files from across the servers
@@ -198,7 +200,7 @@ esc shift g to last
 esc shift :set nu to add line numbers
 esc shift :set nonu to delete line numbers
 esc shift:line mumer
-
+esc sift: /text to search text in file
 
 ------------------------------------------------
 ls commands

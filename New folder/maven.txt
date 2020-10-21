@@ -4,7 +4,7 @@ Examples: ant, maven,gradle java
             c  Rmake, Cmake
 
 What is build management?
- conversion of sc into artificates
+conversion of sc into artificates
 
 each modules consists of jar file in java
 
