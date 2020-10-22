@@ -42,11 +42,7 @@ next billing hour
 
 what is Blue green deployement
 
+U cant modify new configuration when u created
 
-
-
-
-
-
- 
+can create new one add it to old version
          

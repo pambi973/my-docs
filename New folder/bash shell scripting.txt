@@ -133,3 +133,40 @@ grep -e "string" -e "string2" -e "string3"  filename
 
 grep -E [options] filename.txt
 grep -E "string1|string2|string3" filename.txt
+
+pattern is noting but more than one string
+
+rules to create pattren
+| PIPE 
+^ THIS CAP symbol is used to create search starting with "string" will diplay
+$ reverse to ^
+grep -E "^$"  -displays empty lines
+/ remove the special purpose of the symal
+pattern to match directories
+
+grep -E "^d"
+
+pattern to match files
+
+grep -E "^_"
+
+ipv4 severs means 1.2.3.4  each one having 1-999.1-999.1-999.1-999
+
+------------------------------------------------cu
+cut command'
+cut command is a powerful command which will give output with tab differed by difault
+cut -f 1 filename.txt it will print 1 column
+cut -d ':' -f 1 filename.txt d is the field seperator
+
+--------------------------------
+tr command (transfer) 
+will translate lower case to upper case
+
+translate characters from one letter to other letter
+
+-----------------------------
+tee command
+to display output of command store into we will use file
+
+ls -ltr | tee -a abs.txt
+---------------------------------

@@ -299,9 +299,10 @@ ansible ip -m raw -a "scp"
 debug module
 >this module prints statements while excution and can be useful for debugging variables and expressions
 > debug module accepts three parameters
-1 msg
-2 var
-3 verbosity
+1 msg it will print the msg what u given
+2 var it will print default variables
+3 verbosity  -- if u verbosity value it will excute the task at mentiond verbosity only
+if u didnot provided verbosity in terminal it will skip like tags
 --------------------------------------playbook rules
 
 
@@ -386,5 +387,33 @@ simple syntax for playbooks
     - name: this is a second module
       module2
 
+---------------------------------------
+Ansile variable
+1 default variables
+2 custom variables
 
- 
+data types
+we have 4 data types
+1 c: 25 integer
+2 d: 25.63 flating point
+3 my_name: mahesh uniqu code or string
+4 my_boolen: true false yes no these are boolean parameters if u want provide these values as a string u need to use a quatations
+
+sample playbook 
+
+--- 
+  - hosts: all
+    become: yes
+    vars:
+      x: 26
+      y: 12.35
+      my_name: mahesh or "mahesh"
+      my_boolean: True
+    gathering_facts: false
+    tasks:
+    - name: printing my x value
+      debug: 
+       msg: 
+        -   "the value of x is {{x}}"
+        -
+        - 

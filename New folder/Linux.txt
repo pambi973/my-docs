@@ -51,8 +51,8 @@ how to set umask value permanantley for the all users
 uptime uptime of server
 
 free -m ram space
-difference etween free and df -h 
-free will give ram usage df will give memory ususage
+difference Between free and df -h 
+free will give ram usage df will give disk ususage
 
 difference between find and grep commands
 
@@ -231,6 +231,8 @@ tail it will display default 10 lines from bottom
 
 ps -ef to check how many process running by the system
 
+netstat is the command is used to check whether the port is using for other process or not
+
 -----------------------------------------------
 
 Disk management or File managemet
@@ -394,3 +396,65 @@ what are fields cat /etc/passwd
 6 user shell
 
 id users name give in how many grous user having will give
+------------------------------------------------------
+to check the installed packages in machine
+
+rpm -qa
+
+total no
+rpm -qa | wc -l
+
+whether the package is avalible or not
+
+rpm -q packagename
+complete information of the package
+rpm -qi package name
+to see the files and directories of the package
+rpm -ql package name
+
+to  remove packages 
+rpm -e package name
+to remove dependicy packags
+rpm -e package nam --nodeps
+
+to install packages
+rpm -ivh package name
+
+to install dependices packages
+rpm -ivh package name --nodeps
+
+-----------------------------------------
+yum yellodog updater modified
+
+yum is an ineractive rpm based package manager
+it can automatically perform system upadtes, include dependicy packages,.
+it can also perform  
+-------------------------------------
+LVM
+logical volume Manager
+
+creaating    physical volume and combiing all into one and than 
+create one group n in that we will maintaining
+
+--------------------------------------------------
+how to record input and output of you terminal 
+
+before starting of the session 
+give a command as
+script logfile.txt
+exit at last
+script -a logfile.txt
+
+----------------------------------------------
+ip of this system
+
+hostname
+ifconfig
+
+----------------------------
+how to kill running process 
+
+ps -ef
+kill -p pid
+
+netstat -a | grep port no
