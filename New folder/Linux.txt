@@ -52,7 +52,7 @@ uptime uptime of server
 
 free -m ram space
 difference Between free and df -h 
-free will give ram usage df will give disk ususage
+free will give ram usage df will give disk usage
 
 difference between find and grep commands
 
@@ -233,6 +233,7 @@ ps -ef to check how many process running by the system
 
 netstat is the command is used to check whether the port is using for other process or not
 
+netstat -tupln |grep LISTEN 22
 -----------------------------------------------
 
 Disk management or File managemet

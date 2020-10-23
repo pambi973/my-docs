@@ -417,3 +417,91 @@ sample playbook
         -   "the value of x is {{x}}"
         -
         - 
+
+Key value representations is scalar
+
+one key multile values is called list or sequence
+
+pakgs: 
+- 'vim'
+- 'nginx'
+- 'httpd'
+
+maping or dictionary
+
+web_servers:
+- Linux: 'httpd'
+- Windows: 'vim' 
+
+If u want store the op of modules by using a variable called a register
+
+---
+  - hosts
+    gather_facts: false
+    tasks:
+    - shell: bash --version
+      register: ash_ver
+
+    - debug: 
+        var=ash_ver
+
+
+
+--------------------------------------------------------------
+variables in yml or playooks
+1 vars
+
+In simply we can store our variables in vars section
+
+x: 25
+t: 52
+my_name: mahesh
+
+2) vars_promt
+
+in vars prompt section we cat give variable as a command promt
+
+---
+  - hosts
+    vars_prompt:
+     - name: variale_name
+       prompt: Enter ur Variablename
+       private: no
+prompt we give prompt to user
+private no means it will to user what he entered
+
+3) vars_files
+
+we can store our variables into one file and we can call them
+---
+  -hosts
+   vars_files:
+    - filename
+    - filename2
+
+4) we can pass variale values in command line
+ansible-playbook play.yml -e x=var_value
+
+----------------------------------
+for arthematic operations we are using zinja syntax in ansible'
+vars
+x: 45
+y: 58
+{{x}} -{{y}} = {{x+y}}
+
+if
+ ur doing it with
+vars_prompt
+- name: x
+  prompt:  enter the value of x
+  private: no
+- name: y
+  prompt: the value of y
+  private: no
+task: 
+- debug:
+   the value of x+y is {{x|int+y|int}} 
+
+by default prompt will take as string as variable
+
+----------------------------------------------------------

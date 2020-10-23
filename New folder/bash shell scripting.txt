@@ -163,10 +163,33 @@ tr command (transfer)
 will translate lower case to upper case
 
 translate characters from one letter to other letter
-
+tr [] [] <file.txt
+tr "i" "I" <file.txt
+tr -d "," it will delete , in the op
 -----------------------------
 tee command
 to display output of command store into we will use file
 
 ls -ltr | tee -a abs.txt
 ---------------------------------
+
+simple hello world command
+
+echo command advanced options
+
+echo -e \n means nextline
+        \t horizontal tab
+\t vertical tab
+\b backspace
+\r carring return
+\ escape characters
+
+----------------------------------------------------
+for any linux system we can use 
+#!/usr/bin/usr bash it will work in all linux system
+
+-------------------------------------------
+Debugging of shell script
+
+
+
