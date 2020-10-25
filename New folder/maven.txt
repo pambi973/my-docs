@@ -1,4 +1,4 @@
-Build tools are programs that automate the creation of executable applications from source code
+ Build tools are programs that automate the creation of executable applications from source code
 Examples: ant, maven,gradle java
             ms build .net
             c  Rmake, Cmake
@@ -72,5 +72,6 @@ if not it is in releaseing state
 -----------------------------------------
 https://mindmajix.com/maven-interview-questions
 
+Archetype is a Maven project templating toolkit. An archetype is defined as an original pattern or model from which all other things of the same kind are made. The name fits as we are trying to provide a system that provides a consistent means of generating Maven projects. Archetype will help authors create Maven project templates for users, and provides users with the means to generate parameterized versions of those project template.
+-----------------------------------------------------
 
- 

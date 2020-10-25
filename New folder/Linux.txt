@@ -396,6 +396,12 @@ what are fields cat /etc/passwd
 5 home directory of user
 6 user shell
 
+user adding in ubuntu is different from others
+useradd username in other linux it will defaultly create userhome directory 
+but in ubuntu
+useradd -m username
+it will create userhome directry 
+
 id users name give in how many grous user having will give
 ------------------------------------------------------
 to check the installed packages in machine

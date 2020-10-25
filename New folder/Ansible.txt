@@ -504,4 +504,111 @@ task:
 
 by default prompt will take as string as variable
 
+-------------------------------------------------
+condition statement
+
+When is simply if statement in oter python and shells
+
+a simple playbook using when statement
+
+---
+  - hosts: all
+    gather_facts: yes
+    become: yes
+    tasks:
+      - name: installing httpd in all servers
+        yum: 
+          name: httpd
+          state: present
+        when: ansible_distribution != ubuntu
+      - name: installing httpd in ubuntu servers
+        apt:
+          name: httpd
+          state: present
+        when: ansible_distribution == "ubuntu"
+
 ----------------------------------------------------------
+Inline condition statement
+
+nohing But ifelse
+
+a simple playbook
+
+---
+  - hosts: all
+    gather_facts: false
+    become: yes
+    vars:
+      x: 5
+      y: 58
+      larger: "{{ x if (x>y) else y }}"
+    tasks: 
+    - name: debug mdoule to display larest number
+      debug: "the largest number is: {{larger}}" 
+
+      
+
+----------------------------------------------
+Handlers:
+
+Handlers are noting but simple tasks, handlers will excute a task when notify section is present
+
+that means when there is change in your task notify will allow you to excute a  task
+
+---
+  - hosts: localhost
+    gather_facts: false
+    become: yes
+    tasks:
+      - name: Install httpd
+        yum:
+          name: httpd
+          state: present
+        notify:
+          - start httpd
+    handlers:
+      - name: start httpd
+        service:
+          name: httpd
+          state: started
+
+--------------------------------------------------------
+Loops:
+
+Simply loops are nothing but excuting simple tasks with multiple times 
+
+---
+  - hosts: localhost
+    gather_facts: false
+    become: yes
+    tasks:
+      - yum:
+         name: gettext-devel
+         state: present
+      - yum:
+         name: openssl-devel
+         state: present
+      - yum:
+         name: perl-CPAN
+         state: present
+      - yum:
+         name: perl-devel
+         state: present
+      - yum:
+         name: zlib-devel
+         state: present
+
+---
+  - hosts: localhost
+    gather_facts: false
+    become: yes
+    tasks:
+      - yum:
+         name: "{{item}}"
+         state: absent
+        loop:
+          - gettext-devel
+          - openssl-devel
+          - perl-CPAN
+          - perl-devel
+          - zlib-devel

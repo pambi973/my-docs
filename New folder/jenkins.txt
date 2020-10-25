@@ -15,7 +15,7 @@ No of stages of environment
 3 UAT user acceptance testing 
 4 Staging environment repilica to production
 5 production environment production
-------
+--------------------
 what is the difference between hudson and jenkins
 on top of hudson they are created jenkins
 -----------------------
@@ -172,9 +172,12 @@ to change jenkins port number
 sudo vim /etc/sysconfig/jenkins
 systemctl jenkins restart
 
+in windows
+program files
+jenkins
+jenkins.xml
 
-
-------------------------------------------------------
+-----------------------------------------------------
 pipe line in jenkins
 
 1 declarative

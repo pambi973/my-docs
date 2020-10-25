@@ -22,23 +22,11 @@ Variables:
  
 read command is used to take input from terminal
 
-
+What is the default variable for read command is REPLy
 --------------------------------------
-install packages using shell script
 
-#!/bin/bash
-#This simple installation script for any package 
-echo "please enter your name"
-read "name"
-echo "hello $name"
-echo "what is your linux"
-read "linux"
-echo your linux is "$linux"
-echo "which package you want to install"
-read "pname"
-echo "your $pname is installing"
-yum install $pname -y
-echo "your $pname is installed"
+
+
 
 
 
@@ -189,7 +177,63 @@ for any linux system we can use
 #!/usr/bin/usr bash it will work in all linux system
 
 -------------------------------------------
-Debugging of shell script
+Debugging of shell script:
+determinig the cause which fails the script
+types
+1 syntax errors
+2 runtime errors
 
+run excution will throw a error
+but in case of syntax errors the script will stop 
 
+bash is an interpeter
+bash will excutes code line by line
 
+debugging will be done with set commands
+
+set -n simply syntax errors
+set -x it will display command and op
+set -e exit script if any command fails
+------------------------------------------
+how to pass command line argumens
+
+command line arguments or variables we can pass while excution of the script
+
+sh xys.sh 52 54 56
+
+echo "$1"
+echo "$2"
+echo "$3"
+
+to print all variables
+echo "$@"
+
+or echo"$*"
+
+to know the count of command line arguments
+
+echo "$#"
+
+------------------------------------------------------
+arthematic operation bash scrpting
+
+advanced modes 
+1 (()) double parathasis
+
+ex: ((sum=x+y))
+
+2 bc bash calucaltor
+
+ex: "bc<<<$x+$y"
+-------------------------------------------
+Simple case statement
+
+case
+  1) statement
+    ;;
+  2) statement
+   ;;
+
+   *) statement
+    ;;
+esac
