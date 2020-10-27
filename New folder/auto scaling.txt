@@ -24,13 +24,13 @@ Scale down  opp tp scale out and scale up
  
 Auto Scaling group
 
-Always keep minimum number of instances running
+-Always keep minimum number of instances running
 
-Launch or terminate instances to meet desired capacity
+-Launch or terminate instances to meet desired capacity
 
-never start more than maximum number of instances
+-never start more than maximum number of instances
 
-keeps capacity balanced across AZs 
+-keeps capacity balanced across AZs 
 
 Launch Configuration
 
@@ -40,7 +40,7 @@ In which Avalibility zone having more server
 oldest configuration
 next billing hour
 
-what is Blue green deployement
+-what is Blue green deployement
 
 U cant modify new configuration when u created
 

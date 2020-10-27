@@ -22,12 +22,7 @@ difference between shell and kernel
 shell is mediater between user and kernel
 
 kernel base version for linux
-
-
-
-
-
---------------
+-------------
 
 umask values 0022 for root user 0002 for normal user
 
@@ -47,17 +42,34 @@ you need to add umask value in .bash profile
 how to set umask value permanantley for the all users
 
 /etc/profile
+-----------------------------------
+Some Linux Commands:
 
-uptime uptime of server
+1 uptime uptime of server
+2 free -m ram space
+3 difference Between free and df -h 
+4 free will give ram usage df will give disk usage
 
-free -m ram space
-difference Between free and df -h 
-free will give ram usage df will give disk usage
+5 difference between find and grep commands
 
-difference between find and grep commands
+6 find will search file in directory 
+7 grep will search a string in file
 
-find will search file in directory 
-grep will search a string in file
+9 find . -type f -ls |grep '2017'
+10 command to give ownership to others
+chown -R username:groupname 
+11 man
+12 uname
+
+
+Some Linux commands
+
+touch to create empty file
+ls -la all files in directory
+
+command to show empty files in current directory
+find . -type f -empty
+find . -type d -empty d means directory
 
 find . -type f -ls |grep '2017'
 
@@ -77,28 +89,13 @@ proc: process info.. cpuinfo
 root user home directory is /root
 
 
-what is indoe
+what is indoe?
 
 The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory. Each inode stores the attributes and disk block locations of the object's data.
-to change permision or giving ownership to others for directory
 
-command
-chown -R username:groupname directoryname
 
 ---------------------------------------------
-Some Linux commands
-
-touch to create empty file
-ls -la all files in directory
-
-command to show empty files in current directory
-find . -type f -empty
-find . -type d -empty d means directory
-
-find . -type f -ls |grep '2017'
-
------------------------------------------
-SCP command Secure copy if you want copy files from across the servers
+Secure copy if you want copy files from across the servers
 
 scp filename username@ip:path
 
@@ -116,9 +113,6 @@ cut -c 1-3 filename
 
 cut -d ":" -f 1 filename
 
-man
-uname
-
 AwK command
 Awk is a scripting language used for manipulating data and generating reports.The awk command programming language requires no compiling, and allows the user to use variables, numeric functions, string functions, and logical operators.
 WHAT CAN WE DO WITH AWK ?
@@ -133,10 +127,6 @@ WHAT CAN WE DO WITH AWK ?
 awk '{print $0}' .txt
 awk '{print $1,$3}' .txt
 awk '{print NR $0}' .txt
-
-
-----------------------------
-free -m to check how much ram storage is avalible
 
 ------------------------------
 
@@ -314,7 +304,6 @@ linux os has 4 booting phases
 4) init phase
 
 Bios phase 
-
 -----------------------------------------------------
 what is run level 
 
@@ -465,3 +454,23 @@ ps -ef
 kill -p pid
 
 netstat -a | grep port no
+
+-------------------------------------------
+SWAP memory
+
+it is a temorary memory or virtual memory when ever the proces is not having enough space to run we can increase swap memory
+
+to check complete memory of system 
+free 
+
+existing swap memory avalible 
+swapon -s
+
+we can do it in two types
+1 file
+
+---------------------------------------------
+We have two versions of java in our system do you want use another version of how can u use
+
+alternatives --config java
+then select number 2

@@ -1,5 +1,5 @@
 versions
-
-git 
-maven
-Anslile using 2.4 now 2.8
+jenkins version-2.x
+git -2.2
+maven- 3.6.x
+Anslbile using 2.4 now 2.8

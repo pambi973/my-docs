@@ -612,3 +612,45 @@ Simply loops are nothing but excuting simple tasks with multiple times
           - perl-CPAN
           - perl-devel
           - zlib-devel
+
+------------------------------------------
+some useful modules
+- get_url:
+    url: paste it
+    dest: destinaion path
+
+- unarchive:
+    src:
+    dest:
+    remote_src: yes
+ to extarc our files 
+-------------------------
+to renameFiles
+name: remaning 
+command: mv src dest
+--------------------------
+to run tomcat
+
+name: startup tomcat
+shell:  path/startup.sh
+to run it in background
+shell: nohup path/startup.sh and symbal
+-------------------------------------------------
+need to change tomact port numer through ansible
+
+need to copy sever.xml file from conf directory to our ACM and creat one variable as {{tomcat_port}} at port number
+
+save the file as server.xml.j2 means jinja file
+
+if u want copy  any static file from acm to managed node we can use copy module
+
+but in this case my file havriables i want to copy from acm to managed node
+we will use
+
+template module
+
+template:
+  src:
+  dest: 
+
+

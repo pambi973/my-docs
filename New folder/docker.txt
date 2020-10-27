@@ -1,4 +1,4 @@
- what is docker
+ What is docker
 docker is containrization tool 
 
 docker is written in golanguage
@@ -39,9 +39,9 @@ and next one is internal
 docker ps --help
 
 containers are two types
-short live 
+1 short live 
 
-long lived   
+2 long lived   
 
 
 docker mainly focus on application based containers(long lived containers)
@@ -50,11 +50,11 @@ docker stop container id
 
 docker start cid
 
-need to stop the container and remove the image from docker
+need to stop the container to remove the image from docker
 
 docker rmi -f imageid 
 
-docker images -q
+docker images -qa
 
 docker rmi -f $(docker images -qa)
 
@@ -81,7 +81,7 @@ var/lib/docker
 
 
 first command
-- docker info
+- docker info 
 - docker help
 
 how to get inside the container
@@ -219,7 +219,6 @@ single host networking
 
 multi host networking(docker swarm)
 
-
 3 type
 
 none
@@ -234,4 +233,5 @@ docker swarm init
 
 -----------------------
 A Dockerfile is a text document that contains all the command lines to assemble an image
+
 
