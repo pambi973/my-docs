@@ -176,10 +176,26 @@ kill
 tags
 nothing but versioning
 
+what is docker diff command
+
+docker diff command will give the differences of docker base image to present state
+
+docker diff container name or id
 ------------------------------------------ 
-docker  custom image creation by using docker file
+Docker images we can do in 3 ways
+1 docker images images name we can pull from docker hub
+
+2 From the conatainer we can create image
+
+command docker commit containername or id imagename
+
+check in docker images 
+image was created
+
+3 using Docker file
+docker  custom image creation by using Docker file
  
-docker file is nothing but instruction
+Docker file is nothing but instruction
 
 docker parameters
 
@@ -187,16 +203,32 @@ FROM - selection of your right base image
 
 MAINTAINER/LABEL - name
 
-RUN - these are commands that are executed during build of our image
+RUN - these are commands that are executed during build of our image/ or to excute commands and it will create alayer in image.
 
-CMD - these are cmd are executed while runnig container
+CMD - these are cmd are executed while runnig container or Excute commands during container creation
+
+In docker file we can use CMD in only once if u write second cmd it will overwrite first one 
+
+ENTRYPOINT - similar to cmd but has iger priority over CMD first commands will be excuted by entrypoint only
+In case of entry point it will append to above one
+
+in docker file first give entry point and add CMD 
 
 COPY - copying files from localmachine to container
-ADD - files will copy from internet or s3 bucket
 
-Docker ignore file can ignore while files are in add or copy time 
+ADD - files will copy from internet or s3 bucket and it will also unzip our files
 
-EXPOSE - Ports
+EXPOSE - Ports 8080 
+
+WORKDIR - to set working dir for a container
+
+ARG -
+
+
+
+command to create build images
+
+docker build -t imagename .
 --------------------------------------
 docekr file
 to build docker file docker build -t name of image

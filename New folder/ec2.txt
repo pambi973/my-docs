@@ -86,3 +86,21 @@ aws s3 cp . s3://bucket name/folder  --recursive
 
 we can modify the root volume of server it means goto ebs volumes 
 and select the server and modify volume  roboot ur system
+-------------------------------------------
+
+can we attac root volume of one server to root volume of another server same az
+
+1 create EC2 instance
+
+2 take a snapchat
+ delete ec2 instance
+
+3 convert snapchat into volume
+
+4 select other ec2 instance
+
+5 stop the instance
+
+6 delete root volume in volumes 
+
+7 attach this volume as root volume

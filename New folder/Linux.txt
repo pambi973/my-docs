@@ -1,5 +1,7 @@
 LINUX
 ---------------
+how to know kernal version uname will give 
+run level which you are in who -r
 linux flauvor of unix
 unix flavors  
 
@@ -14,7 +16,7 @@ ubuntu
 centos
 fedora
 suse
-debia
+debian
 kali
 
 difference between shell and kernel
@@ -60,6 +62,7 @@ Some Linux Commands:
 chown -R username:groupname 
 11 man
 12 uname
+13 how to know the size lo the file ls -s and du -h
 
 
 Some Linux commands
@@ -78,8 +81,8 @@ directory structure of linux
 
 /= root directory imp directory
 
-home contains the users info
-bin:binary files normal user can acess
+home: contains the users info
+bin: binary files normal user can acess
 sbin: binary files root user can acess
 etc: all config files
 lib: libraries
@@ -402,7 +405,7 @@ rpm -qa | wc -l
 
 whether the package is avalible or not
 
-rpm -q packagename
+rpm -q (packagename)
 complete information of the package
 rpm -qi package name
 to see the files and directories of the package

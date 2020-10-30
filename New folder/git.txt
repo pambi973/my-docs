@@ -1,8 +1,9 @@
 Forking is nothing but copying others github account to my account
 
 what is difference between merge and pull request
-merge will happens etween two branches
+merge will happens between two branches
 pr will happens between two accounts
+pr will happen in between two branches like protected branches
 
 what is collaerator
 

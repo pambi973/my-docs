@@ -1,4 +1,4 @@
-Ansible is a configuration management tool
+ Ansible is a configuration management tool
 Ansible will follow push mechanism
 Ansible is agent less tool
 what is idempotency
@@ -64,7 +64,7 @@ yaml language converts our keypair values to python language
 yml and xml and json these are human and machine redability
 
 before writing yaml need to identify key values based on requirement
-sample file
+ sample file
 
 companies:
 -  Name:microsft
@@ -73,7 +73,7 @@ companies:
     Location:Bangalore
 Module
 module is smallest unit of which used for defining your task
-task is nothing but 
+ 
 playbook 
 playbooks consists of tasks
 
@@ -158,7 +158,7 @@ means we need give fingerprint acess as true while first time connecting to the 
 if we provide host key it will not ask
 ----------------------------------------------------
 in rhel we are unable to install ansible
-so we can install ir from pip
+so we can install  from pip
 
 yum install pytho2
 
@@ -219,7 +219,7 @@ using module called file or diectory
 
 ansible all -m file "path=/tmp/hello.txt state=touch" 
 
-ansible all -m file "path=/tmp/hello.txt state=directory"
+ansible all -m file "path=/tmp/hello state=directory"
 
 -b or --become=yes
 sudo permisions to user
@@ -231,7 +231,8 @@ ansible all -m setup -a"filter=ansible_mounts"
 -------------------------------------
 facts are two types 
 1 default facts
-2 custom facts
+
+ 2 custom facts
 other tahn default facts u want collect extra data then u need to create custom facts
 what is custom facts
 if u want know versions of all applications like git maven python u can create custom facts
@@ -459,7 +460,7 @@ my_name: mahesh
 
 2) vars_promt
 
-in vars prompt section we cat give variable as a command promt
+in vars prompt section we can give variable as a command promt
 
 ---
   - hosts

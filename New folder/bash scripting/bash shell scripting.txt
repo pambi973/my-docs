@@ -190,8 +190,8 @@ set -n simply syntax errors
 set -x it will display command and op
 set -e exit script if any command fails
 ------------------------------------------
-how to pass command line argumens
-
+how to pass command l
+0
 command line arguments or variables we can pass while excution of the script
 
 sh xys.sh 52 54 56
@@ -231,4 +231,32 @@ case
 
    *) statement
     ;;
-esac
+ esac
+
+--------------------------------------------------
+at command: 
+at command is used schdule ur job at onetime
+syntax: at 9.00
+enter filename.sh
+cntl+D
+ 
+one more syntax
+at  9.00 AM july 25
+enter script name
+
+do you want know how many scripts are with at
+atq 
+atrm no to remove schedules
+-----------------------------------------------
+crontab -e
+we can write our jobs which u want take backup
+
+* * * * * sh script.sh
+
+* time in minutes
+* hours
+* days of month
+* months in the year
+* day in the week
+
+ 

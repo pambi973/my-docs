@@ -1,0 +1,52 @@
+Having 3.4+ years of IT experience as DevOps Engineer and Software
+Configuration activities and deployment activities for web-based
+software application
+Experienced in working on Agile operations process and tools area (Code
+review, unit test automation, Build & Release automation, Environment,
+Service, Incident and Change Management).
+Experience and knowledge in AWS Cloud platform and its features which
+includes EC2, VPC, ELB, EBS Volumes, AMI, IAM, S3, CloudWatch.
+Extensive experience in using Version control systems includes GIT & GIT
+HUB.
+Experince in Working as a git adimn level activites like creating and protecting branch like UAT and Production
+and adding collaberators to the branch.
+Responsible for taking the source code and compiling using Maven and
+package it in its distributable format such as a WAR file.
+Expertise in build tools like Maven for building J2EE/Java application
+artefacts and deploying it on multiple environments such as DEV, QA,
+and UAT.
+Responsible for storing our artifacts in S3 Buckets.
+Experienced in Jenkins by installing, configuring and maintaining for
+purpose of continuous integration (CI)
+Expericed in Creating master slave configurations in Jenkins.
+Built end to end automation for all build and deployments and created
+Jenkins CI pipelines.
+Expertise in building pipeline and multibranch pipeline for our services in
+development, staging, and pre-production environment by using the
+integrated tool Jenkins.
+Setting up continuous delivery framework using Jenkins.
+Worked and supported on several java applications migrations to Jenkins
+pipeline.
+Knowledge on Docker container to create Docker images for different
+environments.
+Knowledge in the creation of Docker containers and Docker consoles for
+managing the application life cycle
+Knowledge in Creating custom Docker images using Docker file for easier
+replication of DEV, QA Environments in local machines
+Having good Experience in ANSIBLE for Deployment on Multiple
+platforms.
+Good Experience in ansible playbooks for deploying war files in our Environments by using Jenkins.
+Knowledge on Configuring and monitoring technology like Cloud Watch.
+Deployed the applications to Tomcat Application Server and static
+content to Apache Web servers
+Strong ability to troubleshoot any issues generated while building,
+deploying and in Different Stages.
+Good communication skills with the ability to interact with User and
+development teams.
+Actively involved in AGILE methodologies while executing the project
+Hands-On experience with JIRA, an issue and project management
+tracking tool
+Efficient in working closely with teams to ensure high quality and timely
+delivery of builds and releases.
+Involved in Daily and Weekly status meetings, Send consolidated weekly
+based report to PM by EOW

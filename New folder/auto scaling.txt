@@ -44,5 +44,24 @@ next billing hour
 
 U cant modify new configuration when u created
 
-can create new one add it to old version
-         
+can create new one add it to launch configuration version
+
+----------------------------------------
+Scaling policies
+
+Auto scaling notification
+-----------------------------------
+
+1 creating group of ec2 instances that can uo or down depending up on conditions set
+
+2 horizontal scaling will be done
+
+----------------------------------------
+
+Autosacling components
+
+1 launch configuration
+
+2 auto scaling group
+
+3 scaling policy          

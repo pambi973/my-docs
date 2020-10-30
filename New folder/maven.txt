@@ -1,4 +1,10 @@
- Build tools are programs that automate the creation of executable applications from source code
+-----------------------------
+mvn installation
+mvn is declarative and having life cycles
+but in ant we dont have it
+
+
+Build tools are programs that automate the creation of executable applications from source code
 Examples: ant, maven,gradle java
             ms build .net
             c  Rmake, Cmake
@@ -20,6 +26,13 @@ dependency management tool
 What is pom and what it contains?
 POM is means project object model. The pom. xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc.
  pom is configuration file for maven, for every product we have a configuration build file.
+
+1 project information
+2 build dependencies
+3 goals
+4 plugins
+5 versions
+
 pom.xml having information about the project,
 
 

@@ -1,7 +1,10 @@
 VPC
 max/16
 min/28 
-
+Some private IPS
+192.168.0.0
+172.16.0.0
+10.0.0.0
 CIDR
 Classical inter domain range
 Subnets are cannot be larger than VPC
@@ -24,10 +27,86 @@ per subnet 200 ip
 
 5 ELP elastic ip
 
+VPC STRUCTure
+----------------
+1 IGW - will connects with VPC
+2 Route tables will connects with AZ
+3 NACLs will connects with AZS
+4 NAT gate way will be with Public subnet
+
+------------------------------------------------
+what are the difference between NACL and security groups
+
+Security groups are statefull NACLs are state less
+In SG we will give inbound rules out bound rules will be automatically done by itself
+
+comming to NACL We need to give Inound and outbound rules
+ 
+we had to block ip adress from NACL only
+
+what is Subnet
+
+subnet is creating bigger network into smaller network
+
+we have two types of subnets
+1 public subnet
+2 private subnet
+
+What is Elasticip
+
+Elasic ip is static public ip.
+are charged
+
+What is Difference Between NATgateway and IGW
+
+IGW is attached VPC to allow traffic from inernet to our EC2 instance
+
+NAT gateway is placed at Public subnet for dowloading or acessing any internet in Private subnet through NAT gateway
+this NAT gate way is attached to out private subnet
+
+What is NAT instance
+
+NAT instance will do same but it has to maintain by us.
+for NAT instance we need to go to community AMIs select NATAMI launch instance
+
+Route Tables
+-----------------
+By creating VPC it will create one route table
+for on sunet we need to connect with one route table only
+1 main route table
 
 
+afer we need to create one custom route table to allow traffic
+from internet
 
 
+2 custom route table
 
+our main and custom route table having one rule it is local that can talk with all instaces in the VPCs
+we will attach our private sunet to our main route tale and custom to our public subnet
 
+------------------------------
+creating VPc is two types
+1 vpc wizard
+2 vpc default
 
+----------------------------
+resrved IPs inAWS
+0.0 : Network address.
+0.1 : Reserved by AWS for the VPC router.
+0.2 : Reserved by AWS. The IP address of the DNS server is the base of the VPC network range plus two. ...
+0.3 : Reserved by AWS for future use.
+0.255 : Network broadcast address.
+
+------------------------------------
+A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by AWS PrivateLink. A VPC endpoint does not require an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection
+-----------------------------------------
+Flow logs
+
+VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to Amazon CloudWatch Logs or Amazon S3. After you've created a flow log, you can retrieve and view its data in the chosen destination
+
+we can create flow logs in 3 levels
+
+1 vpc level
+2 sub net level
+3 ENI level 

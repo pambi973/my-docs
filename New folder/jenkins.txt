@@ -24,8 +24,8 @@ types of jenkins jobs
 2 mvn project - it will excutes mvn projects only
 3 external job - job will be excuted by external machine like nodes
 4 multi configuration job - means job will run parallely even though we have enough excuters
-5 Multi barnching job
-6 pipe line job 
+5 Multi barnching job -
+6 pipe line job - we will create our jobs using pipelines here
 ----------------------------------
 jenkins homepage
 1 new item -creating new job
@@ -96,7 +96,7 @@ Authentication types
 
 --------------------------------------------------
 Difference between matrix based and project based matrix authorization and role based authorization
-
+ 
 matix based authrization users will get overall permissions to jobs
 but in preoject we can restrict the users for jobs
 
@@ -132,7 +132,7 @@ plugins use cases
 4 rebuilder plugin
 when there is parameterized build if it fails we can run build with out giving parameters.
 5  Muilti Branch pipline  used to build from multiple branches inone scm
-6 job import plugin
+6 job import plugin we can import job configuration
 7 ssh agent 
 ------------------------------------------------
 Creation of job consists
@@ -151,7 +151,7 @@ Creation of job consists
 4 throttle bilds - we can manage  count of builds  
 5 disble this project -
 6 Excute concurent build if necessary- we can build same job parallely
-
+7 
 
 
 Build triggers
@@ -221,11 +221,45 @@ pipeline{
      }
   }
 }
-   
 
+can we run paralle stage also example is like   
 
-
-
+Jenkinsfile
+pipeline {
+    agent none
+    stages {
+        stage('Run Tests') {
+            parallel {
+                stage('Test On Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    steps {
+                        bat "run-tests.bat"
+                    }
+                    post {
+                        always {
+                            junit "**/TEST-*.xml"
+                        }
+                    }
+                }
+                stage('Test On Linux') {
+                    agent {
+                        label "linux"
+                    }
+                    steps {
+                        sh "run-tests.sh"
+                    }
+                    post {
+                        always {
+                            junit "**/TEST-*.xml"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -253,4 +287,25 @@ in my current job we need to goto build action
 
 in build actions we have copy artifacts
 
+-----------------------------------
 
+Backup in jenkins 
+
+we can take buckup jenins by using two steps one is instaling plugin called thin-backup
+and then 
+go with
+
+to take backup of jobs
+
+we will schedule on cronjob 
+
+steps to take it
+
+crontab -e
+* * * * * scriptname
+
+script
+
+#!/bin/bash
+src = path
+dest = path
