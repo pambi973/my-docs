@@ -2,7 +2,7 @@ LINUX
 ---------------
 how to know kernal version uname will give 
 run level which you are in who -r
-linux flauvor of unix
+linux is a flauvor of unix
 unix flavors  
 
 solaris
@@ -237,7 +237,7 @@ fdisk -l
 fdisk diskname
 
 it will opens disk with partion table along with command prompt
-
+   
 command (m for help): n for creating new partition
 enter first cylinder number: no
 last cylindr no: u can give no or size(+sizeM or K or G)
@@ -302,7 +302,7 @@ soft link will work across the file system across c and d drives  but in case of
 linux os has 4 booting phases
 
 1) bios phase
-2) osloader phase
+2) osloader phase MBR Masterboot recorde GRUB grand unified bottloader
 3) kernel phase
 4) init phase
 

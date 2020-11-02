@@ -99,7 +99,7 @@ resrved IPs inAWS
 0.255 : Network broadcast address.
 
 ------------------------------------
-A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by AWS PrivateLink. A VPC endpoint does not require an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection
+A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by AWS PrivateLink. A VPC endpoint does not require an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
 -----------------------------------------
 Flow logs
 
