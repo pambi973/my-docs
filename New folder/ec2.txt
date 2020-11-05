@@ -63,9 +63,9 @@ instance life cycle
 
 
 private
-192.168.
-10.
-172.16.31
+192.168.0.0
+10.0.0.0
+172.16.0.0
 remaining are pubilc ip
 
 server launching time private ip will create first
@@ -81,6 +81,11 @@ while attaching volumes we need to stop running instances
 --------------------------------------------------
 how to copy files from ec2 to s3 or s3 to ec2
 
+need to attach role from ec2 to s3
+actions
+change instance settings
+attach or replace iam role
+add policy to that role
 aws s3 cp sorce dest --recursive
 aws s3 cp . s3://bucket name/folder  --recursive
 
@@ -88,7 +93,7 @@ we can modify the root volume of server it means goto ebs volumes
 and select the server and modify volume  roboot ur system
 -------------------------------------------
 
-can we attac root volume of one server to root volume of another server same az
+can we attach root volume of one server to root volume of another server same az
 
 1 create EC2 instance
 
@@ -104,3 +109,32 @@ can we attac root volume of one server to root volume of another server same az
 6 delete root volume in volumes 
 
 7 attach this volume as root volume
+
+---------------------------------------
+steps to launch ec2 instance
+1 chose AMI
+2 choose instance type
+3 configure instance
+4 add storage
+5 add tags
+6 configure security group
+7 launch instance
+
+how to trouleshoot instance 
+
+check whether health checks status
+check port no is open or not
+check for which ip is this open to acess
+
+if it is a web server check services was started or not
+
+---------------------------
+we cant copy volumes from one region to other region
+
+but we can create volume to snapchat and we can copy snapchat from one instance to other instance
+
+we can create AMI from snapchat and we can copy to our region
+---------------------------------------
+we can take automatically snapchat with life cycle manager in EBS volumes
+
+create iam role

@@ -34,13 +34,15 @@ we create users and we will add them into groups
 
 Policies
 policies is nothing giving acess or restricting users to the particular service
+we can add policies to the particular users and groups and roles
+
 
 in policies we have 3 types
 1 Aws managed - we have 500 above policies these are not fine grained policies
 2 custmer managed- we can customised our policy with  our requirement
 3 inline policies- for particular user
 
-In custmer managedpolicies we have to do in two steps
+In custmer managed policies we have to do in two steps
 1 visual editor
 2 JSON
 
@@ -48,9 +50,8 @@ Visual editor is simple grapical interface to add policies
 
 In polices mainly consists of 5 
 1 Version Date when the policy was created
-2 statement - we can have multiple statements als0
+2 statement - we can have multiple statements also
 3 effect - allow or deny
-4 Action - s3
+4 Action - s3 put get
 5 resources - which resouce you
 
-And We have limit for custmer managed policies as 5 after 5 polcies 1 replaced with 6 one

@@ -50,8 +50,7 @@ Some Linux Commands:
 1 uptime uptime of server
 2 free -m ram space
 3 difference Between free and df -h 
-4 free will give ram usage df will give disk usage
-
+4 free will give ram usage df will give   disk usage
 5 difference between find and grep commands
 
 6 find will search file in directory 

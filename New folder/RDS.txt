@@ -1,0 +1,23 @@
+RDS relationaldata base
+
+Amazon rDS makes it easy to setup, operate and scale a relational database in the cloud
+it provides cost efficient and resizale capacity while automating time consuming administration tasks such as hardware provisioning database setup, patching and backups.
+
+Amazon rds having 
+1 amazon aurora
+2 postgre SQL
+3 my sql
+4 maria db
+5 oracle DB
+6 SQl
+
+------
+read repilica - a syncronus
+
+multi AZ- syncronus 
+ 
+
+3 types
+1 prod
+2 dev/test
+3 free tier

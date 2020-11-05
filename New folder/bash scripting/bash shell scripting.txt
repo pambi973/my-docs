@@ -33,7 +33,7 @@ which cp
 which ls 
 will be in usr/bin directorty
 
-do u want define any variales to pass acommands you need create a script and copy to the particular path
+do u want define any variales to pass a commands you need create a script and copy to the particular path
 
 ec2-user/bin
 if u copy anything to bin it will excutes as a script

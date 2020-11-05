@@ -309,3 +309,25 @@ script
 #!/bin/bash
 src = path
 dest = path
+-----------------------------------
+
+some important points on tomcat
+
+do u want change port no for tomcat go to conf server.xml 
+connectorport
+
+do u want add users for the tomcat
+go to tomcatuser.xml
+
+create role 
+
+manager-gui
+create user for gui
+user
+passwd
+
+do u want depoly through deploy to container plugin
+need to add users as user
+passwd 
+manager-script
+

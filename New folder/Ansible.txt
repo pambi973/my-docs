@@ -1,4 +1,4 @@
- Ansible is a configuration management tool
+Ansible is a configuration management tool
 Ansible will follow push mechanism
 Ansible is agent less tool
 what is idempotency
@@ -65,7 +65,7 @@ yml and xml and json these are human and machine redability
 
 before writing yaml need to identify key values based on requirement
  sample file
-
+ 
 companies:
 -  Name:microsft
     Location:Hyderabad

@@ -1,0 +1,49 @@
+IN kubernetes architecture-
+--------------------------
+consists of two nodes
+1 master node
+2 worker nodes
+
+1 master node:
+
+master node consists of the following components
+1 kube api server
+2 etcd cluster
+3 controller manager
+4 kube schedular
+
+Worker nodes
+1 kubelet
+2 kub proxy
+
+---------------------------------------
+What is Etcd
+
+it is a key value store
+used to store and retrive small channels of data like configuration data
+
+
+installation
+1 download the binaries
+2 extarct
+3 run etcd services
+
+port 2379 
+
+ectdctl command is used to get retrival of data
+
+etcd cluster consists of 
+nods
+pods
+configs
+secrets
+accounts
+roles
+bindings
+others
+
+
+---------------
+kube api server:
+
+kube api server is the only one talk with all components
