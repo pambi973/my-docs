@@ -247,6 +247,12 @@ enter script name
 do you want know how many scripts are with at
 atq 
 atrm no to remove schedules
+do you want check list in at 
+cd /var/spool/at
+
+do u want restrict user to use at
+vi /etc/at.deny
+add user name
 -----------------------------------------------
 crontab -e
 we can write our jobs which u want take backup
@@ -259,4 +265,10 @@ we can write our jobs which u want take backup
 * months in the year
 * day in the week
 
+to check cron list
+crontab -l
+
+to restrict users
+
+cd /etc/cron.deny
  

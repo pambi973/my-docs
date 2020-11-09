@@ -51,6 +51,7 @@ Some Linux Commands:
 2 free -m ram space
 3 difference Between free and df -h 
 4 free will give ram usage df will give   disk usage
+6 du -sh command will give size of the direcory or file
 5 difference between find and grep commands
 
 6 find will search file in directory 
@@ -58,10 +59,17 @@ Some Linux Commands:
 
 9 find . -type f -ls |grep '2017'
 10 command to give ownership to others
-chown -R username:groupname 
+chown -R username:groupname file
+to change group for user
+useradd -G groupname username
+
+to change group of the file
+chgrp -R gpname filename
+
 11 man
 12 uname
 13 how to know the size lo the file ls -s and du -h
+14 /etc/cpu-info
 
 
 Some Linux commands
@@ -319,7 +327,7 @@ init4  un used
 init5 GUI
 init6 restart
 
-to check present run level of system 
+To check present run level of system 
 who -r
 
 init6
@@ -476,3 +484,15 @@ We have two versions of java in our system do you want use another version of ho
 
 alternatives --config java
 then select number 2
+------------------------------
+
+Linux networking
+
+hostname or uname -n
+
+to change hostname temporarly
+hostname newname
+
+
+ 
+

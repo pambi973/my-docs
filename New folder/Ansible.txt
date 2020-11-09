@@ -269,7 +269,7 @@ are two type
 1 static inventory 
 2 dyanamic inventory
 
-Dyanamic inventory is uesd when node are in cloud platform
+Dyanamic inventory is uesd when node are in cloud platform.
 
 need to add scripts based on cloud platform we need to download scripts
 for aws
@@ -655,3 +655,20 @@ template:
   dest: 
 
 
+-----------------------
+roles 
+ansible roles are reusable tasks
+we will create each component which we are using in our in infrastracre we will create a role
+
+components of roles:
+
+1 defaults: 
+nothing but default variables which was defined ansible
+2 files:
+ which we want copy static files into remote machines we will use this
+3 handlers:
+4 tasks:
+5 templates:
+where we want copy some dyanmic files into remote machines we will use template module
+6 vars: you want store any variable defined to use in tasks or play books define here
+7 meta will store data meta information

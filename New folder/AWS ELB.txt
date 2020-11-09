@@ -1,3 +1,8 @@
+While taking certification from AWS certification managet
+we can take additional name for our domain as like subdomain
+*.mahesh.com
+
+
 ELB
 Elastic load balancer work
 

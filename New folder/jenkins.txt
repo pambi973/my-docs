@@ -1,7 +1,7 @@
 advntages?
-jenkins is ci/cd tool written in jenkins
+jenkins is ci/cd tool written in java
 open source
-its a cross platform tool
+it is a cross platform tool
 plugin based tool
 
 what is CI?
@@ -21,7 +21,7 @@ on top of hudson they are created jenkins
 -----------------------
 types of jenkins jobs
 1 freestyle project - we can create any type of projects here
-2 mvn project - it will excutes mvn projects only
+ 2 mvn project - it will excutes mvn projects only
 3 external job - job will be excuted by external machine like nodes
 4 multi configuration job - means job will run parallely even though we have enough excuters
 5 Multi barnching job -
