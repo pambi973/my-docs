@@ -264,8 +264,8 @@ commands : mkfs.ext4  partition name(/dev/sda6)
 
 mount the partition
 
- need to create one directry
-
+need to create one directry
+ 
 mkdir /directory name
 
 mount partition name /directory name -temporary
@@ -388,7 +388,7 @@ what are the fields in cat /etc/shadow
 8 
 
 what are fields cat /etc/passwd 
-1 usernam
+1 username
 2 x 
 3 userid
 4 group id

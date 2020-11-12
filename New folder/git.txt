@@ -110,9 +110,9 @@ what are difference between cvcs and dvcs
 
 
 clone first time to machine
-pull update
-push changes to push
-pull fetch+merge
+pull update.
+push changes to push.
+pull fetch+merge.
 fetch is data will come to .git repo
 
 

@@ -155,7 +155,7 @@ git branch master1
 
 git branch
 
-git checckout master1
+git checkout master1
 
 git branch
 

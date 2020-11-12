@@ -231,8 +231,7 @@ ansible all -m setup -a"filter=ansible_mounts"
 -------------------------------------
 facts are two types 
 1 default facts
-
- 2 custom facts
+2 custom facts
 other tahn default facts u want collect extra data then u need to create custom facts
 what is custom facts
 if u want know versions of all applications like git maven python u can create custom facts

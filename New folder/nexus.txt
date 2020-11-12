@@ -1,0 +1,15 @@
+what is nexus
+
+repo management tool
+
+packages store 
+jar
+war
+from sona type
+develped in java
+community
+pro version for enterprize
+
+why nexus
+------------
+
