@@ -4,19 +4,20 @@ Ansible is agent less tool
 what is idempotency
 means gives same consistant results
 
-Ansible in RHEL8 yum install ansible is not working
+Ansible 
+in RHEL8 yum install ansible is not working
 need to install pyton2
 need to install pip ansible -y
 after installation we dont have ansible default structure
-we need to create structure of ansile
+we need to create structure of ansbile
 
 ACM Should contain (Ansible control machine) linux machine
 
 Enable Password based authentication
        goto      (cd /etc/ssh/sshd_config)
        password authentication yes
-      service ssh restart
-      service ssh status
+       service ssh restart
+       service ssh status
 
 1 i want to create user
 adduser ansible
@@ -64,7 +65,7 @@ yaml language converts our keypair values to python language
 yml and xml and json these are human and machine redability
 
 before writing yaml need to identify key values based on requirement
- sample file
+sample file
  
 companies:
 -  Name:microsft
@@ -87,7 +88,7 @@ playbooks consists of tasks
      state: present
 
 to run playbook in ansible command is
- ansible-playbook playbook name
+ansible-playbook playbook name
 
 ansible palybook with tags:
 tags in ansible playbooks is to excute particular task or skip particular  task in ansible 
@@ -105,11 +106,9 @@ tags in ansible playbooks is to excute particular task or skip particular  task 
 command while excuting
 ansible-playbook play.yml --tags=install
 ansible-playbook play.yml --skip-tags=install it will skips the particular task
-
-
 --------------------------------------------
 ansible directory structure
- tree /etc/ansible
+tree /etc/ansible
 1 ansible.cfg
 2 host
 3 roles
@@ -157,7 +156,7 @@ host_key_checking=false in ansible.cfg file
 means we need give fingerprint acess as true while first time connecting to the nodes yes/no yes 
 if we provide host key it will not ask
 ----------------------------------------------------
-in rhel we are unable to install ansible
+In rhel we are unable to install ansible
 so we can install  from pip
 
 yum install pytho2
@@ -232,7 +231,7 @@ ansible all -m setup -a"filter=ansible_mounts"
 facts are two types 
 1 default facts
 2 custom facts
-other tahn default facts u want collect extra data then u need to create custom facts
+other than default facts u want collect extra data then u need to create custom facts
 what is custom facts
 if u want know versions of all applications like git maven python u can create custom facts
 steps to make custom facts
@@ -263,7 +262,6 @@ EOF
 
 --------------------------------------
 Inventories
-
 are two type
 1 static inventory 
 2 dyanamic inventory
@@ -282,14 +280,11 @@ need to add iam role to ansible engine
 full acess to  all ec2 instance
 
 if u launch new ec2 server as mannuly ansible will not reach new server bcoz
-the server didnot exchaanged keys for passwd less authentication
+the server didnot exchaanged keys for passwd less authentication.
 in real time cases we need to we will configure auoscaling with configred AMI which already exchanged so no problem will occured.
 anisble-playbook  play.yml -i ec2.in
 adhoc command is
 ansible {ec2users} group name -m module -a argument -i hostnamr {ec2.in}
-
-
-
 
 -------------------------------------
 some manage nodes doesnot having python then we can use raw module
@@ -360,7 +355,7 @@ adhoc command is: ansible ipadress -m ping -k -u username
 -------------------------------------------------------------------
 Ansible Variables
 
-Variale is nothin but storing values
+Variale is nothing but storing values
 
 types of variables
 1 default variables
@@ -625,7 +620,7 @@ some useful modules
     remote_src: yes
  to extarc our files 
 -------------------------
-to renameFiles
+to rename Files
 name: remaning 
 command: mv src dest
 --------------------------
@@ -664,10 +659,10 @@ components of roles:
 1 defaults: 
 nothing but default variables which was defined ansible
 2 files:
- which we want copy static files into remote machines we will use this
+ which we want copy static files into remote machines we will use this directory here we will copy files
 3 handlers:
 4 tasks:
 5 templates:
-where we want copy some dyanmic files into remote machines we will use template module
+where we can store our jinza files into templates directory
 6 vars: you want store any variable defined to use in tasks or play books define here
 7 meta will store data meta information

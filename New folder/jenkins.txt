@@ -1,4 +1,22 @@
-advntages?
+updating my jenkins server
+need to stop all the jobs of jenkins
+after that need to go with yum update jenkins
+if the yum repository was not updated with jenkins 
+download jenkins.war file file update with previous jenkins.war file
+var/lib/jenkins/jenkins.war
+
+------------------------------------
+job config history plugin
+
+html publisher
+extend email plugin
+
+
+what is pipeline
+to flow sequential our project through automation.
+how we declare variables in pipeline
+DSL means domain specific language like groovy
+Advntages?
 jenkins is ci/cd tool written in java
 open source
 it is a cross platform tool
@@ -7,7 +25,7 @@ plugin based tool
 what is CI?
 CI is nothing but when there is any commits occured in our version control tools the build will trigger automatically.
 what is CD?
-Continous Delivery means deploying code from lover environemt to production environment is called continous delivery. continous 
+Continuous Delivery and Continuous Deployment have a lot in common…” ... The key difference is that with Continuous Deployment, your application is run through an automated pipeline workflow. Whereas with Continuous Delivery, your application is ready to be deployed whenever your team decides it's time to do so 
 
 No of stages of environment
 1 Development
@@ -21,7 +39,7 @@ on top of hudson they are created jenkins
 -----------------------
 types of jenkins jobs
 1 freestyle project - we can create any type of projects here
- 2 mvn project - it will excutes mvn projects only
+2 mvn project - it will excutes mvn projects only 
 3 external job - job will be excuted by external machine like nodes
 4 multi configuration job - means job will run parallely even though we have enough excuters
 5 Multi barnching job -
@@ -159,15 +177,12 @@ a) trigger builds remotely
 token name
 b) Build other projects  are built
 Creating upstream project here
-
 c) Build Periodically
 d) Build when a change is pushed to github
 e) Poll SCM
 --------------------------------------------------
 not possible to take scm from to tools like svn and git
-
-
-----------------------
+---------------------
 to change jenkins port number
 sudo vim /etc/sysconfig/jenkins
 systemctl jenkins restart
@@ -177,7 +192,7 @@ program files
 jenkins
 jenkins.xml
 
------------------------------------------------------
+----------------------------------------------
 pipe line in jenkins
 
 1 declarative

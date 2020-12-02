@@ -83,7 +83,7 @@ s3 infrequent acess
 storage classification types
 
 1) s3 standard
-2) s3 intelligent
+2) s3 intelligent-tiering
 3) s3 standard infrequent acess
 4) s3 az1a
 5)  s3 glacier

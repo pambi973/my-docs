@@ -1,5 +1,46 @@
 LINUX
 ---------------
+The umask is an abbreviated form of User file creation mask. ... The umask command can also modify the bits in the mask if there is a need to do so. While “ulimit” is a Linux inbuilt command which provides control over the resources available to the shell and to the processes started by it.
+
+The top command is a monitoring utility that gives a user insights into the system metrics such as uptime, load average,  %CPU and % memory utilization
+
+To check if a service is running, use the syntax:
+
+systemctl status service_name
+
+To start a service on reboot run use the syntax:
+
+systemctl enable service_name
+
+lsof is a command line utility which is used to list the information about the files that are opened by various processes. In unix, 
+everything is a file: pipes, sockets, directories, devices, etc. So by using lsof, you can get the information about any opened files.
+
+List processes which opened a specific file
+
+# lsof /var/log/syslog
+lists all open files belonging to processes owned by the user
+lsof -c process
+lsof -p pid
+
+# lsof -u username
+Kill all process that belongs to a particular user
+
+# kill -9 `lsof -t -u username
+List all network connections
+
+# lsof -i
+List all network files in use by a specific process
+
+# lsof -i -a -c ssh
+List processes which are listening on a particular port
+
+# lsof -i :25
+
+
+Use the df command to check the space used on your hard drive and the space remaining / free space.
+Additionally, use the du command to check usage by specific files and directories.
+
+
 how to know kernal version uname will give 
 run level which you are in who -r
 linux is a flauvor of unix
@@ -24,9 +65,9 @@ difference between shell and kernel
 shell is mediater between user and kernel
 
 kernel base version for linux
--------------
+-----------------------------
 
-umask values 0022 for root user 0002 for normal user
+umask values 022 for root user 002 for normal user
 
 is it possible to change umask value
 
@@ -53,9 +94,8 @@ Some Linux Commands:
 4 free will give ram usage df will give   disk usage
 6 du -sh command will give size of the direcory or file
 5 difference between find and grep commands
-
-6 find will search file in directory 
-7 grep will search a string in file
+6 find will search file or directories 
+7 grep will search a string or pattern in file 
 
 9 find . -type f -ls |grep '2017'
 10 command to give ownership to others
@@ -72,7 +112,7 @@ chgrp -R gpname filename
 14 /etc/cpu-info
 
 
-Some Linux commands
+..Some Linux commands
 
 touch to create empty file
 ls -la all files in directory
@@ -102,8 +142,7 @@ root user home directory is /root
 what is indoe?
 
 The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory. Each inode stores the attributes and disk block locations of the object's data.
-
-
+ls -i
 ---------------------------------------------
 Secure copy if you want copy files from across the servers
 
@@ -234,7 +273,7 @@ ps -ef to check how many process running by the system
 netstat is the command is used to check whether the port is using for other process or not
 
 netstat -tupln |grep LISTEN 22
------------------------------------------------
+-------------------------------------------
 
 Disk management or File managemet
 
@@ -244,7 +283,7 @@ fdisk -l
 fdisk diskname
 
 it will opens disk with partion table along with command prompt
-   
+    
 command (m for help): n for creating new partition
 enter first cylinder number: no
 last cylindr no: u can give no or size(+sizeM or K or G)
@@ -321,11 +360,11 @@ run level is a software program under which some group of  services and process 
 
 init 0 shutdown the system
 init 1 single usermode
-init2 multi user mode without nfs(network file system)
-init3 multi user mode with nfs(full text mode and we are using)
-init4  un used
-init5 GUI
-init6 restart
+init 2 multi user mode without nfs(network file system)
+init 3 multi user mode with nfs(full text mode and we are using)
+init 4  un used
+init 5 GUI
+init 6 restart
 
 To check present run level of system 
 who -r
@@ -380,7 +419,7 @@ what are the fields in cat /etc/shadow
 
 1 usename
 2 encrypted passwd
-3 date of password change(keep in days when kernel started)
+3 date of password change(keep in days when  kernel started)
 4 min days passwd expiry
 5 Max daays passwd expiry
 6 warning
@@ -403,6 +442,8 @@ it will create userhome directry
 
 id users name give in how many grous user having will give
 ------------------------------------------------------
+
+RPM redhat package manager  --offline package modifier
 to check the installed packages in machine
 
 rpm -qa
@@ -411,26 +452,31 @@ total no
 rpm -qa | wc -l
 
 whether the package is avalible or not
-
 rpm -q (packagename)
 complete information of the package
 rpm -qi package name
 to see the files and directories of the package
 rpm -ql package name
+rpm -qf /bin/ls
+rpm -qc package name
+
 
 to  remove packages 
 rpm -e package name
 to remove dependicy packags
-rpm -e package nam --nodeps
+rpm -e package name --nodeps
 
 to install packages
 rpm -ivh package name
+i install
+v verbos
+h percentage
 
 to install dependices packages
 rpm -ivh package name --nodeps
 
 -----------------------------------------
-yum yellodog updater modified
+yum yellodog updater modified -online package modifer
 
 yum is an ineractive rpm based package manager
 it can automatically perform system upadtes, include dependicy packages,.
@@ -494,5 +540,59 @@ to change hostname temporarly
 hostname newname
 
 
- 
+where we can change or assign ip for the linux serer
 
+etc/sysconfig/Network-scripts/systemeth0
+
+where we can add NIS domain name to the system
+etc/sysconfig/networks
+add 
+NIS DOMAINNAME: india.com  
+-----------------------------
+to run the process in background 
+
+process name and ampersand or nohup
+
+to check background process
+jobs command
+
+to bring it foreground 
+fg -%1
+
+to increase the priority to the process
+
+nice -10 processname
+
+max we can increase  upto 19
+
+top command to check process with cpu utilization
+
+
+--------------------------------
+back up tools in linux
+tar
+
+1 asolute method 
+
+ ---------------------------------
+Raid levels: redundant array of independant disks
+
+it is storage technolgy that combines physical hard dreive components into one logical component and writes data in several ways called rai levels.
+
+types
+raid 0 stripping
+raid 1 mirroring
+raid 5 stripping with parity (90%)
+raid 1+0
+
+raid 5 
+it stores data on other disks parallely with parity information of otther two disks
+min 3
+max 32
+parity= total size/no of disks
+
+need to instal mdadm package
+mdadm -C /dev/md0 -n3 /dev/sda15 /dev/sda16 /dev/sda17 -l5
+
+mdadm /dev/md0 -a /dev/sda16
+to remove -r

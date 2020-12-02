@@ -1,0 +1,42 @@
+what is sonarque
+
+Is a quality management tool
+
+what is quality
+  - code quality 
+            1 peer code review
+            2 static code review
+  - test quality
+
+it manages quality of our code and stores reports also
+
+what is the prboelm - why this problem- who has introduced- how to fix
+
+two release
+1 cE commuinty version
+2 EV enterprize version
+
+it was developed in java
+
+prequisties
+java
+
+Sonarque Architecture
+1 sonarcube server
+dashboard
+data base like mysql
+rules
+2 scaner
+- agent running in aplace where sourcecode
+-we can call it through cmd line
+- maven
+- gradle
+- jenkins
+
+3 source code
+
+-----------------------------
+scaneer 
+
+in the src server we will have property file
+  

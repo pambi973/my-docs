@@ -1,13 +1,32 @@
 AWS
 creating ec2 (instance)servers
-EC2 infrastructure as aservice
+EC2 infrastructure as a service
 EKS
 Elastic container service (DOCKER)
 Elastic beanstalk (platform as a service)
 
 AWS EC2 instance two healthy checks named as
 1 System Reachability Check, which confirms that AWS is able to get the network packets to the user’s instance.
-2 Instance Status Check, which detects a problem within the EC2 instance.
+2 Instance Status Check, which detects a problem with in the EC2 instance.
+
+types of ec2 instances
+1 general purpose
+2 memory optimized
+3 cpu optimized
+4 accelated computing
+5 storage optimized
+6 previous generation
+7 high memory
+
+1 general purpose-  consists of balanced compute,memory and networking
+m series m4,m5 (large)
+t series t2 t3, (nao,micro,medium,large)
+a series A1 (medium,large)
+
+2 compute optimized instance c4
+
+
+
 
 AMI amazon machine image:
 
@@ -31,7 +50,7 @@ storage types need to search
 snapchat is nothig but taking backup for c or d drives or root volumes in linux
 
 security
- source 
+source 
 myip
 anywhere
 custom
@@ -55,7 +74,7 @@ instance life cycle
 
                       pending
 
-               stopped------stopping-------running-----------rebooting
+stopped------stopping-------running-----------rebooting
 
 
 
@@ -138,3 +157,49 @@ we can create AMI from snapchat and we can copy to our region
 we can take automatically snapchat with life cycle manager in EBS volumes
 
 create iam role
+
+-----------------------------------ebs max size 16 tb
+
+how can we connect to ec2 if the pem key is lost
+Amazon Web Service is the market leader for cloud systems, giving an option to select specific AWS professional services with in their budget. EC2 instance can help in data recovery and many such features, makes AWS best in this trending cloud environment.
+
+Accessing the EC2 instance even if you loose the pem file is rather easy.
+
+1. First, create a new instance by creating new access file, call it 'helper' instance with same region and VPC as of the lost pem file instance.
+
+2. Now stop the lost pem file instance. Remember not to terminate instance but to stop it.
+
+3. Goto EBS volumes, select the root volume of the lost pem file instance and detach.
+
+4. Now again select the detached volume and this time you have to attach this volume to helper instance which we created before. Since helper instance already has a root volume by default as /dev/sda1, the newly attached volume will be secondary(eg: /dev/sdf).
+
+5. Login to your helper instance with its pem file.
+
+6. Execute below commands:
+
+mount /dev/xvdf1 /mnt
+# cp /root/.ssh/authorized_keys /mnt/root/.ssh/
+# umount /mnt
+
+7. Detach the secondary volume from helper instance. 
+
+8. Again attach the volume back to our recovery instance. Start the instance. Terminate the helper instance.
+
+Use helper instance pem file to log into recovery instance.
+
+how can we resize ebs volume
+
+1 modify volume through console
+
+2 goto ec2 instance
+
+3 check lsblk or fdisk -l
+
+4 growpart /dev/xvda 1 1 is partion number
+
+5 check the file system
+df -h
+6 attach it file system
+resize2fs /dev/xvda1
+7 now check df -h 
+

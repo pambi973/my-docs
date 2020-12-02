@@ -7,5 +7,37 @@ what is management events
 
 users in root account level tracking is called management events
 
+cloud watch logs will have retention time around 400-500 days
+
+how we trouble shoot our application
+
+first check security group whehter ports are pen for public or not
+
+after check disk space
+
+after load on the servers load average we can acheive by top and up time 
+in the load avg we will have x x x
+first one 1 miniute
+second one for 5 miniute
+third one for 15 miniute
+
+max value will depends on cpu cores
+
+ram of the systems
+
+check the cpu 
+
+check files are opened
+
+check network is there or not
+
+5xx errors means our database is not running properly
+
+------------------------------
+
+
+
+
+
 
 

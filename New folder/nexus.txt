@@ -10,6 +10,51 @@ develped in java
 community
 pro version for enterprize
 
+community version - free - limited func
+Enterprize version - price - more advantageous function
+
+
 why nexus
 ------------
+avalibiltiy package
+security of package
+write acess will be only for ci tool mostly
+Durability.
+easy adminstration and maintaince.
 
+
+steps to nexus setup
+-------------------------
+need download nexus repo from wget
+tar file
+untar file
+go to  bin
+
+./ nexus start
+
+cd etc/
+nexus-default.properties
+
+port number will be there
+
+default 8081
+
+---------------------------
+types of repo
+go to settings
+repositories will be there called as repository format
+
+each repository has type 
+
+1 hosted -read -write located nearst to your workspace
+
+2 proxy - read only -cachecopy -from remote repo
+
+3 Group - multiple hosted and multiple proxy can be grouped togethor
+
+maven hosted
+  release 
+  snapchat
+maven proxy
+
+maven group

@@ -1,6 +1,6 @@
 Sh is original shell
 bash bourne again shell
-Bash is noth bu original sh shell + some additional features 
+Bash is nothing but original sh shell + some additional features 
 it was reinvented of shell
 -------------------
 To change permissions to file
@@ -22,16 +22,16 @@ muluti line comment
 
 Variables:
  
-read command is used to take input from terminal
+read command is used to take input from terminal.
 
 What is the default variable for read command is REPLy
 -------------------------------------------
-Basically system defined commands will present at usr/bin
+Basically system defined commands will present at /usr/bin
 
 which pwd
 which cp
 which ls 
-will be in usr/bin directorty
+will be in usr/bin directorty.
 
 do u want define any variales to pass a commands you need create a script and copy to the particular path
 
@@ -51,9 +51,15 @@ Variables are an important part of any program or script. A variable is a simple
 
 variale can be define in terminal and script
 
+variable and types
+
+1 user defined variables
+2 system defined variable
+3 spcial variable
+
 Need to print the variable value or call your variable you need to code $ infront of variable
 
-rule
+user defined variables rule:-
 
 1)variable name should contain lettets(A-Z) numbers (0-9), (_)
 2) variable name should not start with numbers
@@ -64,14 +70,12 @@ rules for storing data
 if u want store data with spaces use x="in beween data should be present"   
 if not u can code like x=nogaps
 
-variable and types
 
-1 user defined variables
-2 system defined variable
-3 spcial variable
+system defined variables are present inside the system or os.
+with set command we can check all system defined variables.
 
-system defined variables are present inside the system or os
-with env command we can check all system defined variables.
+storing command output into variable 
+variablename=$(command)
 
 echo "$"
 $? is a special  variable is using we are
@@ -95,11 +99,11 @@ basic opreations
 options in grep 
 
 -i it will search with case sensitive
--w search with word matching
--v display the values which are not matchng with string
--o display matched parts from matched lines
--n display matched line number
--c display mached count of line number
+-w search with word matching.
+-v display the values which are not matchng with string.
+-o display matched parts from matched lines.
+-n display matched line number.
+-c display mached count of line number.
 -A display after the string n no of lines
 -B before the string
 -C display both
@@ -152,10 +156,8 @@ tr -d "," it will delete , in the op
 -----------------------------
 tee command
 to display output of command store into we will use file
-
 ls -ltr | tee -a abs.txt
 ---------------------------------
-
 simple hello world command
 
 echo command advanced options
@@ -199,11 +201,13 @@ sh xys.sh 52 54 56
 echo "$1"
 echo "$2"
 echo "$3"
+echo "${10}"
+we need to pass curlybrass to print two digit cmd line arguments
 
 to print all variables
 echo "$@"
 
-or echo"$*"
+or echo "$*"
 
 to know the count of command line arguments
 
@@ -221,6 +225,10 @@ ex: ((sum=x+y))
 
 ex: "bc<<<$x+$y"
 -------------------------------------------
+test command
+
+
+-----------------------------------
 Simple case statement
 
 case
@@ -271,4 +279,77 @@ crontab -l
 to restrict users
 
 cd /etc/cron.deny
+---------------------------------------
+sed command
+----------
+sed is a very powerfull command 
+sed is stream editor
+by using sed command we can do this
+1 viewing content
+2 searching
+3 insertion or deletion
+4 find and replace
+-----------------------
+1 viewing content
+
+sed '' filename
+print all data in the file
+
+sed -n '3,6p' filename
+it will print 3,6th lines
+sed -n '3,$p' filename
+it will print from 3 rd last line
+sed -n -e '3p' -e '6p' filename
+it will print 3 and 6 th lines
+sed -n '12,+7p' filename
+sed -n'1~3p' filename
+it will print 1,4,7,10 lines
+sed -n '1~2p' filename
+print alternative lines
+
+deletion
+sed '4,$d' filename
+delete 4 to last line
+sed '4 $!d' 
+delete reversly above
+-----------------------------
+
+do you want do it permenatly in file we need to like
+
+sed -i '3,$p' filename
+ to take backup
+sed -i.back '3 $p' it will take backup and dlete in orginal file.
+
+-------------------------------------------
+2 searching:
+
+searching with word in the file
+
+sed -n '/search word/p' filename
+sed -n -e '/search1/p' -e 'search2/p' filename  
+
+sed -n '/search/!d' filename
+it will delete other lines the word having
+
+----------------------------
+3 find and replace using sed command
+
+sed '/devops/s/bash/ksh/' filename
+
+sed 's/old/new/g' globally
+
+-----------------------------------
+4 insetion and deletion
+
+i before
+a after
+d deletion
  
+sed -i '1i slno name mo' filename
+--------------------------------------
+
+find . -type f -size +100M  to check files size morethan 100 mb
+
+ls -lrt| grep "2017"
+
+-----------------------------------------------

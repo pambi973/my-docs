@@ -8,7 +8,7 @@ Some private IPS
 CIDR
 Classical inter domain range
 Subnets are cannot be larger than VPC
-To change the vpc you must terminate your existing VPc and create new one
+To change the vpc you must terminate your existing VPC and create new one
 
 one VPC have oneIGW
 it is a communication between instances in VPC and internet
@@ -33,6 +33,8 @@ VPC STRUCTure
 2 Route tables will connects with AZ
 3 NACLs will connects with AZS
 4 NAT gate way will be with Public subnet
+
+after creation of vpc need to add enable setting as auto assign public ip option
 
 ------------------------------------------------
 what are the difference between NACL and security groups
@@ -100,6 +102,19 @@ resrved IPs inAWS
 
 ------------------------------------
 A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by AWS PrivateLink. A VPC endpoint does not require an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+to acess AWS services privatlely with out internet can we do with vpc end points 
+
+create end point for service which you want acess like s3 are dynamo db
+
+Steps:-
+1need to create policy for which bucket your giving acess or total s3
+2 after that 
+add vpc end point out private subnet
+3 need to add route for subnet to s3
+4 add this route to security group also
+5 create i am role to ec2 through s3 bucket
+
 -----------------------------------------
 Flow logs
 
@@ -110,3 +125,7 @@ we can create flow logs in 3 levels
 1 vpc level
 2 sub net level
 3 ENI level 
+
+we can send our logs to cloud watch for log analysis or we can send our logs s3 bucket based on our requirement
+
+

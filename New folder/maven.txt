@@ -23,7 +23,7 @@ dependency management tool
  
 
 What is pom and what it contains?
-POM is means project object model.The pom. xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc.
+POM is means project object model.The pom.xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc.
 pom is configuration file for maven, for every product we have a configuration build file.
 
 1 project information
@@ -40,12 +40,15 @@ maven contains default life cycle
 every phase in life cycle called goal
 
 different goals in maven
+1 validate
 1 compile
 2 test
 3 package
 4 integration test
 5 install
+install our war file into maven repository like .m2
 6 deploy
+deploy phase will deploy into nexus repo
 ---------------
 clean
 site
@@ -70,7 +73,7 @@ why it is important
 pom.xml contains
 1 coordiantes means project information
 gid
-artifactid
+artifact id
 version id
 in versioning _snopshot means project is in developing stage
 if not it is in releaseing state

@@ -259,11 +259,83 @@ bridge- between containers
 ----------------------------
 union file system
 ----------------------------------
-docker multi host networking is called docker swarm
-
-docker swarm init
-
 -----------------------
 A Dockerfile is a text document that contains all the command lines to assemble an image
+---------------------------------------------------
+Docker Swarm:-
+----------------
+container orchanstation tool for docker is dockerswarm
+
+Deployment 
+scaling
+load balancing
+health checks
+resource allocation
+
+Docker swarm components
+service defines the task needed to excuted on the manager and worker node
+task refer to the docker container that excute commands on defined services
+manager node 
+worker node
+
+to intialize docker swarm 
+docker swarm init --advertise-advice ip
+it will create docker manager 
+to create worker nodes
+go to worker server
+docker swarm join --token
+
+goto manager
+docker info | swarm
+
+docker node ls
+
+to leave from docker swarm
+go to worker node
+docker swarm leave --force
+
+after this we need go to manager
+docker node ls'
+docker node rm nodeid 
+
+docker service creation
+
+sudo docker service create --name new-service --replicas 3 -p 8080:8080 myimage
+docker service ls
+
+if any container goes down other one will replace y docker swarm
+
+to remove my srvice
+docker rm service name
+
+to check containers 
+docker service ps service name
 
 
+if you want deply multipl services we need to go with docker stack deploy
+for this we need to create yml file for it
+
+docker stack deploy -c practise.yml stack name
+
+to up repilicas
+docker service scale serviced id=repilicas
+
+docker service update --image image name
+
+-------------------------
+docker draining
+
+docker node update --avaliility drain worker1
+
+docker node update --avaliility active worker1
+
+
+-------------------------------
+network connecting
+ sudo docker network create --driver overlay my-ntwork
+
+docker service create --repilicas 3 --network my-net image --name servicename image
+
+to add network for existing service
+docker service update --network-add my-network servicename
+to remove use rm

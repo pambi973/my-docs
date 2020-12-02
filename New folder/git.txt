@@ -1,3 +1,29 @@
+How we merge all commits into one
+git rebase -i HEAD~no(5)
+it will open vi editor page
+need select which final commit u want with squash remainig and pick one
+after it will ask for commit msg
+save the file
+
+git annotaed file name will give who has worked each line of file
+
+
+
+need to introduce yourself
+git config --global user.name ""
+git config --global user.email""
+git config --list
+
+after that we need init 
+git init
+
+what is git status
+git status will displays us whether the file is tracked by git or not
+git log will displays the commits of the files
+git diff will give the difference between working directory and staging area
+git diff --staged
+will give the differences between staging area and local repositories
+-----------------------------------------
 Forking is nothing but copying others github account to my account
 
 what is difference between merge and pull request
@@ -39,7 +65,7 @@ git reset HEAD^
 ------------------------------
 
 git ignore 
-
+  
 do you dont need a particular file to your remote repo
 
 need to create file
@@ -83,7 +109,7 @@ git is hub to hub model
 
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. For the examples in this book, you will use software source code as the files being version controlled, though in reality you can do this with nearly any type of file on a computer.
 
-Devops engineer responsibilities-
+Devops engineer responsibilities:-
 
 creating repos
 user perms
