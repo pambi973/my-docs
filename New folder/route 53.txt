@@ -1,0 +1,29 @@
+route 53
+
+Amazon Route 53 (Route 53) is a scalable and highly available Domain Name System (DNS) service
+Amazon route 53 effectively connects user request to infra running in AWS such as ec2, elb,s3 buckets 
+route53 is aglobal service
+
+SSL stands for Secure Sockets Layer, a global standard security technology that enables encrypted communication between a web browser and a web server.
+
+we need to take domain name from route 53 
+
+after that we need to add to take ssl certificate from certificate manager from AWS
+
+routing policies types
+1 simple routing:
+2 failover: active passive
+3 geo location routing policy: 
+4 geoproximity routing policy
+5 latency routing policy:
+6 weighted routing policy: we can increase or decrease route weight ased on requirement
+
+By default it will create one hosted zone when u create domain name in route53.
+
+in the hosted zone we need to create record set for hosted zone.
+
+types of record types
+A 
+cname:By using cname record type we provide we can upload ssl certificate to the DNS
+
+our servers with europe stockholm eu-north-1 and europe paris eu-west-3

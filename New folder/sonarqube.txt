@@ -1,4 +1,4 @@
-what is sonarque
+what is sonarqube
 
 Is a quality management tool
 

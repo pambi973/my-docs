@@ -5,13 +5,13 @@ what is idempotency
 means gives same consistant results
 
 Ansible 
-in RHEL8 yum install ansible is not working
-need to install pyton2
+RHEL8 yum install ansible is not working
+need to install python2
 need to install pip ansible -y
-after installation we dont have ansible default structure
-we need to create structure of ansbile
+after installation we dont have ansible default structure.
+we need to create structure of ansbile.
 
-ACM Should contain (Ansible control machine) linux machine
+ACM Should contain (Ansible control machine) linux machine.
 
 Enable Password based authentication
        goto      (cd /etc/ssh/sshd_config)
@@ -58,7 +58,7 @@ Ansible excutes commands in 2 ways
 adhoc commands are using in ansible terminal 
 
 What is YAML
- “YAML Ain't Markup Language,”
+“YAML Ain't Markup Language,”
 XML stands for eXtensible Markup Language
 key pair values
 yaml language converts our keypair values to python language
@@ -72,7 +72,7 @@ companies:
     Location:Hyderabad
 -  Name:google
     Location:Bangalore
-Module
+ Module
 module is smallest unit of which used for defining your task
  
 playbook 
@@ -113,7 +113,7 @@ tree /etc/ansible
 2 host
 3 roles
 
-Ansible.cfg------
+ansible.cfg------
 
 PRIORITY OF ANSIBLE.CFG FILE 
 ansible_config environment variable as  -i host filename
@@ -130,8 +130,7 @@ steps
 3 give  owner permission for copied directory
 4 change host file location in ansible.cfg  
 
---------------------------------------------------
-grouping in ansible host file is usefulway 
+---------------------------------------------grouping in ansible host file is usefulway 
 
 [group1]
 --------
@@ -209,7 +208,7 @@ fetch will take data from node to control machine
 flat =yes means it will not create directory of node where file is located
 
 command module 
-ansile will take y default command module
+ansible will take y default command module
 
 --------------------------------------
 create and delete using adhoc commands
@@ -262,15 +261,15 @@ EOF
 
 --------------------------------------
 Inventories
-are two type
+are two types
 1 static inventory 
 2 dyanamic inventory
 
-Dyanamic inventory is uesd when node are in cloud platform.
+Dyanamic inventory is used when node are in cloud platform.
 
 need to add scripts based on cloud platform we need to download scripts
 for aws
-1 ec2.ini
+1 ec2.ini is the config file for ec2.py
 2 ec2.py
 to run the above scripts
 need to instal boto 
@@ -310,7 +309,7 @@ if u didnot provided verbosity in terminal it will skip like tags
    -
 ------------------------------------------------------
 roles
-- place the group of playbooks in one file, it will help to reduce the code omplexity, and increses
+- place the group of playbooks in one file, it will help to reduce the code complexity, and increses
 
 steps
  ansible-galaxy init lamp
@@ -321,13 +320,11 @@ what is handler
 
 handler is simple as like a task in playbook it comes with notify
 ----------------------------------------------
-ansile adhoc commands
+ansible adhoc commands
 to excute one task
-commad
+command
 ansible {servers}where u want excute -m {module} -a{arguement}
-------------------------------------------------------------
-
-In Ansible We can connect managed nodes by using two way
+----------------------------------------------In Ansible We can connect managed nodes by using two way
 1) passwd less authentication using sshkeys exchanges
 2) passwd based authentication creating same user and passwd in all nodes and acm
 
@@ -355,15 +352,13 @@ adhoc command is: ansible ipadress -m ping -k -u username
 -------------------------------------------------------------------
 Ansible Variables
 
-Variale is nothing but storing values
+Variable is nothing but storing values
 
 types of variables
 1 default variables
 2 inventory vars(host vars and group vars)
 3 facts and local facts
 4 registerd vars
-
-
 
 ---------------------------------------
 playbooks
@@ -383,7 +378,7 @@ simple syntax for playbooks
       module2
 
 ---------------------------------------
-Ansile variable
+Ansible variable
 1 default variables
 2 custom variables
 
@@ -435,7 +430,7 @@ If u want store the op of modules by using a variable called a register
     gather_facts: false
     tasks:
     - shell: bash --version
-      register: ash_ver
+      register: bash_ver
 
     - debug: 
         var=ash_ver
@@ -502,7 +497,7 @@ by default prompt will take as string as variable
 -------------------------------------------------
 condition statement
 
-When is simply if statement in oter python and shells
+When is simply if statement in ofter python and shells
 
 a simple playbook using when statement
 
@@ -618,7 +613,7 @@ some useful modules
     src:
     dest:
     remote_src: yes
- to extarc our files 
+ to extarct our files 
 -------------------------
 to rename Files
 name: remaning 
@@ -631,7 +626,7 @@ shell:  path/startup.sh
 to run it in background
 shell: nohup path/startup.sh and symbal
 -------------------------------------------------
-need to change tomact port numer through ansible
+need to change tomact port number through ansible
 
 need to copy sever.xml file from conf directory to our ACM and creat one variable as {{tomcat_port}} at port number
 
@@ -659,7 +654,7 @@ components of roles:
 1 defaults: 
 nothing but default variables which was defined ansible
 2 files:
- which we want copy static files into remote machines we will use this directory here we will copy files
+ which we want copy static files into remote machines we will use this directory here we will copy files.
 3 handlers:
 4 tasks:
 5 templates:

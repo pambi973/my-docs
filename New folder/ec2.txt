@@ -8,9 +8,9 @@ Elastic beanstalk (platform as a service)
 AWS EC2 instance two healthy checks named as
 1 System Reachability Check, which confirms that AWS is able to get the network packets to the user’s instance.
 2 Instance Status Check, which detects a problem with in the EC2 instance.
-
+--------------------------------------
 types of ec2 instances
-1 general purpose
+1 general purpose.
 2 memory optimized
 3 cpu optimized
 4 accelated computing
@@ -42,7 +42,8 @@ majarly we will go with general purpose family
 
 at a time we can launch 5 instance
 
-by default we will launch on demand server we will launch
+by default 
+we will launch on demand server we will launch
 we will not launch spot instance.
 
 storage types need to search
@@ -164,10 +165,10 @@ how can we connect to ec2 if the pem key is lost
 Amazon Web Service is the market leader for cloud systems, giving an option to select specific AWS professional services with in their budget. EC2 instance can help in data recovery and many such features, makes AWS best in this trending cloud environment.
 
 Accessing the EC2 instance even if you loose the pem file is rather easy.
+-------------------------------------
+1.First, create a new instance by creating new access file, call it 'helper' instance with same region and VPC as of the lost pem file instance.
 
-1. First, create a new instance by creating new access file, call it 'helper' instance with same region and VPC as of the lost pem file instance.
-
-2. Now stop the lost pem file instance. Remember not to terminate instance but to stop it.
+2.Now stop the lost pem file instance. Remember not to terminate instance but to stop it.
 
 3. Goto EBS volumes, select the root volume of the lost pem file instance and detach.
 
@@ -186,7 +187,7 @@ mount /dev/xvdf1 /mnt
 8. Again attach the volume back to our recovery instance. Start the instance. Terminate the helper instance.
 
 Use helper instance pem file to log into recovery instance.
-
+---------------------------------------
 how can we resize ebs volume
 
 1 modify volume through console
@@ -203,3 +204,10 @@ df -h
 resize2fs /dev/xvda1
 7 now check df -h 
 
+---------------------------------------
+Differences Between launch template and launch co
+Launch templates (LTs) are newer than launch configurations (LCs) and provide more options to work with. Thus, the AWS documentation recommends use of launch templates (LTs) over launch configuration (LCs):nfiguration
+
+One of the practical key differences between LT and LC is the fact that LC is immutable. Once you define it, you can't edit it. Only a replacement is an option. However, a single LT can have multiple versions
+
+--------------------------------------------

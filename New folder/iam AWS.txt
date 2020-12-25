@@ -1,4 +1,4 @@
-IAM indentity acess management
+ IAM indentity acess management
 iam will give fine grained acess to the users
 identity for whom users/groups/roles
 acess which services policy
@@ -46,7 +46,7 @@ In custmer managed policies we have to do in two steps
 1 visual editor
 2 JSON
 
-Visual editor is simple grapical interface to add policies
+Visual editor is simple graphical interface to add policies.
 
 In polices mainly consists of 5 
 1 Version Date when the policy was created

@@ -2,7 +2,7 @@ LINUX
 ---------------
 The umask is an abbreviated form of User file creation mask. ... The umask command can also modify the bits in the mask if there is a need to do so. While “ulimit” is a Linux inbuilt command which provides control over the resources available to the shell and to the processes started by it.
 
-The top command is a monitoring utility that gives a user insights into the system metrics such as uptime, load average,  %CPU and % memory utilization
+The top command is a monitoring utility that gives a user insights into the system metrics such as uptime, load average,  %CPU and % memory utilization. 
 
 To check if a service is running, use the syntax:
 
@@ -60,6 +60,9 @@ suse
 debian
 kali
 
+Type any one of the following command to find os name and version in Linux:
+cat /etc/os-release.
+
 difference between shell and kernel
 
 shell is mediater between user and kernel
@@ -80,7 +83,7 @@ how to set umask value permanantley for the specific user
 /home/ec2-user
 .bash_profile
 
-you need to add umask value in .bash profile
+you need to add umask value in .bash_profile
 
 how to set umask value permanantley for the all users
 
@@ -138,7 +141,6 @@ proc: process info.. cpuinfo
 
 root user home directory is /root
 
-
 what is indoe?
 
 The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory. Each inode stores the attributes and disk block locations of the object's data.
@@ -148,7 +150,7 @@ Secure copy if you want copy files from across the servers
 
 scp filename username@ip:path
 
-for directory
+For directory
 scp  -R directoryname username@ip:path
 
 Cut Command:
@@ -163,7 +165,7 @@ cut -c 1-3 filename
 cut -d ":" -f 1 filename
 
 AwK command
-Awk is a scripting language used for manipulating data and generating reports.The awk command programming language requires no compiling, and allows the user to use variables, numeric functions, string functions, and logical operators.
+Awk is a scripting language used for manipulating data and generating reports.The awk command programming language requires no compiling, and allows the user to use     variables, numeric functions, string functions, and logical operators.
 WHAT CAN WE DO WITH AWK ?
 
 1. AWK Operations:
@@ -340,11 +342,10 @@ to permenant it
 vi /etc/fstab
 partition name place LABEL=laelname
 ----------------------------------------------
-A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. If you delete the original file, the soft link has no value, because it points to a non-existent file. But in the case of hard link, it is entirely opposite. Even if you delete the original file, the hard link will still has the data of the original file. Because hard link acts as a mirror copy of the original file.
+A symbolic or soft link is an actual link to the original file,whereas a hard link is a mirror copy of the original file. If you delete the original file, the soft link has no value, because it points to a non-existent file. But in the case of hard link, it is entirely opposite. Even if you delete the original file, the hard link will still has the data of the original file. Because hard link acts as a mirror copy of the original file.
 
-soft link will work across the file system across c and d drives  but in case of hard link it will not work
-
------------------------------------------------------ 
+soft link will work across the file system across c and d drives but in case of hard link it will not work.
+---------------------------------------------- 
 linux os has 4 booting phases
 
 1) bios phase
@@ -417,7 +418,7 @@ it will read from cat /etc/default/useradd
 
 what are the fields in cat /etc/shadow
 
-1 usename
+1 username
 2 encrypted passwd
 3 date of password change(keep in days when  kernel started)
 4 min days passwd expiry
@@ -531,13 +532,10 @@ We have two versions of java in our system do you want use another version of ho
 alternatives --config java
 then select number 2
 ------------------------------
-
-Linux networking
-
-hostname or uname -n
-
-to change hostname temporarly
-hostname newname
+-Linux networking
+-hostname or uname -n
+-to change hostname temporarly
+ hostname newname
 
 
 where we can change or assign ip for the linux serer
@@ -577,7 +575,7 @@ tar
  ---------------------------------
 Raid levels: redundant array of independant disks
 
-it is storage technolgy that combines physical hard dreive components into one logical component and writes data in several ways called rai levels.
+it is storage technolgy that combines physical hard dreive components into one logical component and writes data in several ways called raid levels.
 
 types
 raid 0 stripping
@@ -596,3 +594,7 @@ mdadm -C /dev/md0 -n3 /dev/sda15 /dev/sda16 /dev/sda17 -l5
 
 mdadm /dev/md0 -a /dev/sda16
 to remove -r
+
+
+-------------------------------------
+ext2/3/4/Xfs:

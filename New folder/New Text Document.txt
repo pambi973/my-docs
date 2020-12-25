@@ -368,10 +368,10 @@ Cons:
 3.    SSH communication slows down in scaled environments
 Q70) How you handle the merge conflicts in git?
 Follow the steps
-1.    Create Pull request
-2.    Modify according to the requirement by sitting with developers
-3.    Commit the correct file to the branch
-4.    Merge the current branch with master branch.
+1.Create Pull request.
+2.Modify according to the requirement by sitting with developers.
+3.Commit the correct file to the branch
+4.Merge the current branch with master branch.
 Q71) I want to delete 10 days older log files. How can I?
 There is a command in unix to achieve this task find <directory_path> -mtime +10 -name “*.log” -exec rm -f {} \; 2>/dev/null
 What is the difference among chef, puppet and ansible?

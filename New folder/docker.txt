@@ -1,4 +1,4 @@
- What is docker
+What is docker
 docker is containrization tool 
 
 docker is written in golanguage
@@ -7,13 +7,12 @@ containers are isolated workspaces,
 
 docker is opensource- solomon hykes
 
-
 docker install commands
 from docker hub
 
 docker commands
 
-docker --version
+docker --version to know docker version
 
 docker info  whether engine is alive or not
 
@@ -65,10 +64,10 @@ demon
 When a user sends commands, Docker CLI sends information to Docker daemon to manage and make changes to containers, images, and networks. 
 
 --------------------
-docker engine - a platform for running a containers
+docker engine - a platform for running a containers.
 
-docker repo - a place where you can get the images
-public hub.docker.com
+docker repo - a place where you can get the images.
+.public hub.docker.com
 
 pro store.docker.com
 
@@ -91,9 +90,9 @@ docker attach
 
 docker exec executes a new command / create a new process in the container’s environment, while docker attach just connects the standard input/output/error of the main process(with PID 1) inside the container to corresponding standard input/output/error of current terminal(the terminal you are using to run the command).
 
-exec is the way run the excutables and always create new terminal
+exec is the way run the excutables and always create new terminal.
 
-attach is the way to get attached to the running process and will not create a new terminal 
+attach is the way to get attached to the running process and will not create a new terminal. 
 
 how to come out of the container with out existing
 cntrl+p+q
@@ -124,11 +123,11 @@ docker inspect cont-id
 -------------------------------------
 cp copy to files or folders from host to containers or from containers to host
 
-if you wnat delete the container you need to stop it
+if you want delete the container you need to stop it
 docker rm cid
 
 for images you need remove containers with the images and than you need delete images
-docker rmi -f imagename or id
+docker rmi -f imagename or id.
 
 
 how to know cpu and ram used by the containers
@@ -142,12 +141,11 @@ how to stop remove all containers
 docer stop $(ps -qa)
 docker rm $(ps -aq )
 --------------------------------
-
 volumes with containers
 internal -/var/jenkins_home 
 extrenal : /opt/jenkins backup
 
-docker run -d --name=jenkins -p 8080:8080 -p 50000:50000 -v ext:int jenkins
+docker run -d --name=jenkins -p 8080:8080 -p  50000:50000 -v ext:int jenkins
 
 we cant create external volume for running containers
 state less application means the data will not store in container
@@ -166,7 +164,7 @@ docker search
 
 docker networking
 
-how to know th ip of container 
+how to know the ip of container 
 docker inspect cid 
 how to stop containers by force
 kill

@@ -10,8 +10,7 @@ put operation --5gb
 bucket name should be globally unique
 bucket belongs to specific region
 
----------------------------------------------------
-
+----------------------------------------------
 In S3 bucket we have option for each bucket is
 1) overview
 2) properties
@@ -21,7 +20,7 @@ In S3 bucket we have option for each bucket is
 
 1) versioning 
 
-if we Enable versioning for Bucket it will create next level of security for over oeject
+if we Enable versioning for Bucket it will create next level of security for over object
 
 if there is any changes in same object also it will create new version along with existing version with changes ocuured in the oject
 even we delete object in versioning it will show in version mode created delete marker with one more version id
@@ -32,11 +31,11 @@ we need delete objects when versioning is enabled case versioning hide mode
 
 Means once you enable server acess logging 
 we had to create or give path for this bucket logs storing
-that means what we are doing with this bucket all logs will be stored in given path of the bucket
+that means what we are doing with this bucket all logs will be stored in given path of the bucket.
 
 3) static website hosting
 
-that means once we enable this hosting it will create one endpoint for the object if we click on the endpoint in the internet it will show object data
+that means once we enable this hosting it will create one endpoint for the object if we click on the endpoint in the internet it will show object data.
 
 4) object level tracking:
 
@@ -70,12 +69,11 @@ and some more.....
 -------------------------
 >>In permissions we have 
 1)block public acess
-2)acess control list- if want give acess for oter aws account user to acess this bucket 
+2)acess control list- if u want give acess for other aws account user to acess this bucket 
 3) object ownersip 
-4) Bucket policie
+4) Bucket policies
 -------------------------
 Management
-
 in management we have life cycle
 ----------------------
 In Life cycle
@@ -86,7 +84,7 @@ storage classification types
 2) s3 intelligent-tiering
 3) s3 standard infrequent acess
 4) s3 az1a
-5)  s3 glacier
+5) s3 glacier
 6) s3 glacier deep archieve
 
  crr(cross region repilication)

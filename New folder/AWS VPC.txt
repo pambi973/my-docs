@@ -11,7 +11,7 @@ Subnets are cannot be larger than VPC
 To change the vpc you must terminate your existing VPC and create new one
 
 one VPC have oneIGW
-it is a communication between instances in VPC and internet
+It is a communication between instances in VPC and internet
 
 tenancy types
 shared
@@ -36,13 +36,13 @@ VPC STRUCTure
 
 after creation of vpc need to add enable setting as auto assign public ip option
 
-------------------------------------------------
-what are the difference between NACL and security groups
+----------------------------------------------
+what are the difference between NACL and security groups?
 
 Security groups are statefull NACLs are state less
 In SG we will give inbound rules out bound rules will be automatically done by itself
 
-comming to NACL We need to give Inound and outbound rules
+comming to NACL We need to give Inbound and outbound rules
  
 we had to block ip adress from NACL only
 
@@ -59,11 +59,11 @@ What is Elasticip
 Elasic ip is static public ip.
 are charged
 
-What is Difference Between NATgateway and IGW
+What are Difference Between NATgateway and IGW
 
 IGW is attached VPC to allow traffic from inernet to our EC2 instance
 
-NAT gateway is placed at Public subnet for dowloading or acessing any internet in Private subnet through NAT gateway
+NAT gateway is placed at Public subnet for dowloading or acessing any internet in Private subnet through NAT gateway.
 this NAT gate way is attached to out private subnet
 
 What is NAT instance
@@ -74,7 +74,7 @@ for NAT instance we need to go to community AMIs select NATAMI launch instance
 Route Tables
 -----------------
 By creating VPC it will create one route table
-for on sunet we need to connect with one route table only
+for on subnet we need to connect with one route table only.
 1 main route table
 
 
@@ -85,7 +85,7 @@ from internet
 2 custom route table
 
 our main and custom route table having one rule it is local that can talk with all instaces in the VPCs
-we will attach our private sunet to our main route tale and custom to our public subnet
+we will attach our private subnet to our main route table and custom to our public subnet
 
 ------------------------------
 creating VPc is two types
@@ -110,7 +110,7 @@ create end point for service which you want acess like s3 are dynamo db
 Steps:-
 1need to create policy for which bucket your giving acess or total s3
 2 after that 
-add vpc end point out private subnet
+add vpc end point our private subnet
 3 need to add route for subnet to s3
 4 add this route to security group also
 5 create i am role to ec2 through s3 bucket
@@ -118,7 +118,7 @@ add vpc end point out private subnet
 -----------------------------------------
 Flow logs
 
-VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to Amazon CloudWatch Logs or Amazon S3. After you've created a flow log, you can retrieve and view its data in the chosen destination
+VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to Amazon CloudWatch Logs or Amazon S3. After you've created a flow log, you can retrieve and view its data in the chosen destination.
 
 we can create flow logs in 3 levels
 
@@ -126,6 +126,6 @@ we can create flow logs in 3 levels
 2 sub net level
 3 ENI level 
 
-we can send our logs to cloud watch for log analysis or we can send our logs s3 bucket based on our requirement
+we can send our logs to cloud watch for log analysis or we can send our logs s3 bucket based on our requirement.
 
 

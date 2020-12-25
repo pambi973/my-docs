@@ -20,7 +20,7 @@ Advntages?
 jenkins is ci/cd tool written in java
 open source
 it is a cross platform tool
-plugin based tool
+plugin based tool.
 
 what is CI?
 CI is nothing but when there is any commits occured in our version control tools the build will trigger automatically.
@@ -110,9 +110,6 @@ Authentication types
 5 project based matrix autherization strategy
 6 role based security
 --------------------------
-
-
---------------------------------------------------
 Difference between matrix based and project based matrix authorization and role based authorization
  
 matix based authrization users will get overall permissions to jobs
@@ -121,7 +118,7 @@ but in preoject we can restrict the users for jobs
 role based startgies
 here we will create roles
 we will add users to the roles
----------------------------------------------------------------------------
+----------------------------------------------
 can we change jenkins home directory yes
 
 EXPORT JENKINS_HOME=/root/jenkins
@@ -169,8 +166,6 @@ Creation of job consists
 4 throttle bilds - we can manage  count of builds  
 5 disble this project -
 6 Excute concurent build if necessary- we can build same job parallely
-7 
-
 
 Build triggers
 a) trigger builds remotely
@@ -203,7 +198,7 @@ Declative starts with pipeline
 
 scripted starts with node
 --------------------------------------------------
-Structure and syntax of the Declarative pipeline:
+Structure and syntax of the Declarative pipeline:-
 
 The Agent is where the whole pipeline runs. Example, Docker. The Agent has following parameters:
 

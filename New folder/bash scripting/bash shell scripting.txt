@@ -64,13 +64,9 @@ user defined variables rule:-
 1)variable name should contain lettets(A-Z) numbers (0-9), (_)
 2) variable name should not start with numbers
 3) variable name should not have any gaps
-
 rules for storing data
-
 if u want store data with spaces use x="in beween data should be present"   
 if not u can code like x=nogaps
-
-
 system defined variables are present inside the system or os.
 with set command we can check all system defined variables.
 
@@ -85,10 +81,8 @@ in not it was a error
 --------------------------------------
 if u want stroe ur command output into file u need to mention it as
 ls > filename
-
 ----------------------------
 configuring gmail setup on linux server
-
 yum install send mail mail utils -y
 ----------------------------------
 grep command
@@ -106,7 +100,7 @@ options in grep
 -c display mached count of line number.
 -A display after the string n no of lines
 -B before the string
--C display both
+-C display both 
 -r display recursively current directory and its sub directory
 -l to display only file names
 -h to print content and hide filenames
@@ -139,12 +133,11 @@ grep -E "^_"
 
 ipv4 severs means 1.2.3.4  each one having 1-999.1-999.1-999.1-999
 
-------------------------------------------------cu
+----------------------------------------------
 cut command'
 cut command is a powerful command which will give output with tab differed by difault
 cut -f 1 filename.txt it will print 1 column
 cut -d ':' -f 1 filename.txt d is the field seperator
-
 --------------------------------
 tr command (transfer) 
 will translate lower case to upper case
@@ -326,7 +319,7 @@ sed -i.back '3 $p' it will take backup and dlete in orginal file.
 searching with word in the file
 
 sed -n '/search word/p' filename
-sed -n -e '/search1/p' -e 'search2/p' filename  
+sed -n -e '/search1/p' -e 'search2/p' filename 
 
 sed -n '/search/!d' filename
 it will delete other lines the word having

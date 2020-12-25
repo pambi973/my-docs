@@ -1,15 +1,16 @@
 -----------------------------
+mvn version 3.6.2
 mvn installation
 mvn is declarative and having life cycles
 but in ant we dont have it.
 
-Build tools are programs that automate the creation of executable applications from source code
+Build tools are programs that automate the creation of executable applications from source code.
 Examples: ant, maven,gradle java
             ms build .net
             c  Rmake, Cmake
 
 What is build management?
-conversion of sc into artificates
+conversion of sc into artificates.
 
 each modules consists of jar file in java
 
@@ -37,7 +38,7 @@ pom.xml having information about the project.
 life cycle of maven
 
 maven contains default life cycle
-every phase in life cycle called goal
+every phase in life cycle called goal.
 
 different goals in maven
 1 validate
@@ -75,13 +76,13 @@ pom.xml contains
 gid
 artifact id
 version id
-in versioning _snopshot means project is in developing stage
-if not it is in releaseing state
+in versioning _snopshot means project is in developing stage.
+if not it is in releaseing state.
 2 scm locations
 3 dependencies
 4 plugins
 5 modules
-6 distribution management
+6 distribution management.
 -----------------------------------------
 https://mindmajix.com/maven-interview-questions
 

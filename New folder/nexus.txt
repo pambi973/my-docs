@@ -2,6 +2,9 @@ what is nexus
 
 repo management tool
 
+prerequisites
+java 8
+version 3.0.2
 packages store 
 jar
 war
@@ -40,7 +43,8 @@ port number will be there
 default 8081
 
 ---------------------------
-types of repo
+
+types of repo'
 go to settings
 repositories will be there called as repository format
 
